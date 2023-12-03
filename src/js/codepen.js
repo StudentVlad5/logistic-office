@@ -76,7 +76,7 @@ ScrollTrigger.create({
   animation: sun,
   trigger: '.scrollElement',
   start: 'top top',
-  end: '2200 100%',
+  end: '220 100%',
   scrub: 1,
 });
 

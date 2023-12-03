@@ -2,149 +2,128 @@
  $tablet: 768px;
  $desktop: 1440px;
 
+ @keyframes vibrate {
+     0% {
+         -webkit-transform: translate(0);
+         transform: translate(0);
+     }
+
+     20% {
+         -webkit-transform: translate(-2px, 2px);
+         transform: translate(-2px, 2px);
+     }
+
+     40% {
+         -webkit-transform: translate(-2px, -2px);
+         transform: translate(-2px, -2px);
+     }
+
+     60% {
+         -webkit-transform: translate(2px, 2px);
+         transform: translate(2px, 2px);
+     }
+
+     80% {
+         -webkit-transform: translate(2px, -2px);
+         transform: translate(2px, -2px);
+     }
+
+     100% {
+         -webkit-transform: translate(0);
+         transform: translate(0);
+     }
+ }
+
  .canvas {
      position: fixed;
      width: 100vw;
      height: 100vh;
 
      background: rgb(240, 218, 101);
-     background: linear-gradient(180deg, rgba(240, 218, 101, 1) 0%, rgba(200, 233, 148, 1) 100%);
+     background: linear-gradient(180deg, rgba(240, 218, 101, 1) 0%, rgba(200, 233, 148, 1) 50%, rgba(9, 92, 36, 1) 100%);
      background-position: center;
-
-     & img {
-         width: auto;
-         height: auto;
-     }
  }
 
- #canva {
+ //  .screen2,
+ //  .screen3,
+ //  .screen4 {
+ //      visibility: hidden;
+ //  }
+
+ #car {
      position: absolute;
-     top: 67%;
-     left: 53%;
-     z-index: 10;
+     top: 50%;
+     left: 40%;
+     z-index: 11;
      width: 50px;
      height: auto;
-     transform: scale(0.4) translate(-230%, -50%);
+     transform: scale(0.35);
+     //  transform: scale(0.4) translate(-230%, -50%);
 
      @media screen and (min-width: $tablet) {
-         top: 67%;
-         left: 50%;
+         top: 60%;
+         left: 47%;
      }
+
+     //  &.active {
+     //      animation: vibrate 2s linear infinite both;
+     //  }
  }
 
 
- #canva1 {
+ #sun {
      position: absolute;
      top: 5%;
-     right: 25%;
-     z-index: 5;
-     width: 100px;
-     height: auto;
- }
-
- #canva2-1 {
-     position: absolute;
-     top: 15%;
-     left: 5%;
-     z-index: 6;
-     width: 100px;
-     height: auto;
-     opacity: 0.7;
- }
-
- #canva2-2 {
-     position: absolute;
-     top: 12%;
-     right: 20%;
-     transform: rotateY(180deg);
-     z-index: 6;
-     width: 100px;
-     height: auto;
-     opacity: 0.7;
- }
-
- #canva3-1 {
-     position: absolute;
-     top: 55%;
-     left: 13%;
-     z-index: 5;
-     width: 70px;
-     height: auto;
-
-     @media screen and (min-width: $tablet) {
-         top: 45%;
-         left: 10%;
-         width: 100px;
-     }
- }
-
- #canva3-2 {
-     position: absolute;
-     bottom: 35%;
-     right: 20%;
-     transform: rotateY(180deg);
-     z-index: 4;
-     width: 60px;
-     height: auto;
-
-     @media screen and (min-width: $tablet) {
-         bottom: 30%;
-         right: 10%;
-         width: 100px;
-     }
- }
-
- #canva4-1 {
-     position: absolute;
-     top: 67%;
-     left: 3%;
-     z-index: 6;
-     width: 100px;
-     height: auto;
-
-     @media screen and (min-width: $tablet) {
-         top: 63%;
-         left: 5%;
-     }
- }
-
- #canva4-2 {
-     position: absolute;
-     top: 60%;
-     right: 5%;
-     z-index: 6;
-     width: 100px;
-     height: auto;
- }
-
- #canva5-1 {
-     position: absolute;
-     top: 45%;
-     left: -10%;
-     z-index: 3;
-     width: 80%;
-     height: 30%;
-
-     @media screen and (min-width: $tablet) {
-         width: 70%;
-     }
- }
-
- #canva5-2 {
-     position: absolute;
-     top: 45%;
-     right: -10%;
-     transform: rotateY(180deg);
+     right: 35%;
      z-index: 2;
-     width: 80%;
-     height: 30%;
+     width: 100px;
+     height: auto;
+ }
 
-     @media screen and (min-width: $tablet) {
-         width: 70%;
+ #cloud {
+     &-1 {
+         position: absolute;
+         top: 15%;
+         left: 5%;
+         z-index: 3;
+         width: 100px;
+         height: auto;
+         opacity: 0.7;
+     }
+
+     &-2 {
+         position: absolute;
+         top: 12%;
+         right: 20%;
+         transform: rotateY(180deg);
+         z-index: 3;
+         width: 100px;
+         height: auto;
+         opacity: 0.7;
+     }
+
+     &-3 {
+         position: absolute;
+         top: 15%;
+         left: 15%;
+         z-index: 3;
+         width: 100px;
+         height: auto;
+         opacity: 0.7;
+     }
+
+     &-4 {
+         position: absolute;
+         top: 10%;
+         left: 25%;
+         z-index: 3;
+         width: 100px;
+         height: auto;
+         opacity: 0.7;
      }
  }
 
- #canva6 {
+ #builds {
      position: absolute;
      top: 15%;
      left: 0;
@@ -154,19 +133,185 @@
      opacity: 0.5;
  }
 
- #canva7 {
+ #hills {
+     &-1 {
+         position: absolute;
+         top: 45%;
+         left: -10%;
+         z-index: 2;
+         width: 80%;
+         height: 30%;
+
+         @media screen and (min-width: $tablet) {
+             width: 70%;
+         }
+     }
+
+     &-2 {
+         position: absolute;
+         top: 45%;
+         right: -10%;
+         transform: rotateY(180deg);
+         z-index: 2;
+         width: 80%;
+         height: 30%;
+
+         @media screen and (min-width: $tablet) {
+             width: 70%;
+         }
+     }
+ }
+
+ #tree {
+     position: absolute;
+     top: 53%;
+     left: 25%;
+     z-index: 3;
+     width: 60px;
+     height: auto;
+
+     @media screen and (min-width: $tablet) {
+         width: 70px;
+     }
+ }
+
+ #trees {
+     position: absolute;
+     top: 55%;
+     right: 30%;
+     z-index: 3;
+     width: 80px;
+     height: auto;
+ }
+
+ #forest {
+     &-1 {
+         position: absolute;
+         top: 50%;
+         left: 0%;
+         z-index: 3;
+         width: 200px;
+         height: auto;
+
+         @media screen and (min-width: $tablet) {
+             width: 250px;
+         }
+     }
+
+     &-2 {
+         position: absolute;
+         top: 50%;
+         right: 0%;
+         z-index: 3;
+         transform: rotateY(180deg);
+         width: 200px;
+         height: auto;
+
+         @media screen and (min-width: $tablet) {
+             width: 250px;
+         }
+     }
+ }
+
+ #billboard {
+     &-1 {
+         position: absolute;
+         top: 65%;
+         left: 15%;
+         z-index: 3;
+         width: 80px;
+         height: auto;
+         transform: scale(1.5);
+
+         @media screen and (min-width: $tablet) {
+             top: 55%;
+             left: 17%;
+         }
+     }
+
+     &-2 {
+         position: absolute;
+         top: 65%;
+         right: 22%;
+         z-index: 3;
+         width: 70px;
+         height: auto;
+
+         @media screen and (min-width: $tablet) {
+             top: 67%;
+             right: 20%;
+         }
+     }
+ }
+
+ #build {
+     &-1 {
+         position: absolute;
+         top: 55%;
+         left: 20%;
+         z-index: 3;
+         width: 60px;
+         height: auto;
+         @media screen and (min-width: $tablet) {
+             width: 100px;
+         }
+     }
+
+     &-2 {
+         position: absolute;
+         top: 55%;
+         right: 20%;
+         transform: rotateY(180deg);
+         z-index: 3;
+         width: 60px;
+         height: auto;
+         @media screen and (min-width: $tablet) {
+             width: 100px;
+         }
+     }
+     &-3 {
+         position: absolute;
+         top: 65%;
+         right: 20%;
+         transform: rotateY(180deg);
+         z-index: 3;
+         width: 60px;
+         height: auto;
+
+         @media screen and (min-width: $tablet) {
+             top: 63%;
+             right: 13%;
+             width: 100px;
+         }
+     }
+ }
+
+ #hospital {
+     position: absolute;
+     top: 55%;
+     right: 0;
+     z-index: 3;
+     width: 150px;
+     height: auto;
+
+     @media screen and (min-width: $tablet) {
+         width: 200px;
+     }
+ }
+
+ #road {
      position: absolute;
      bottom: 0;
      left: 0;
      z-index: 9;
      width: 100%;
-     height: 70%;
+     height: 65%;
      margin: 0 auto;
      transform: scale(1.2);
 
      @media screen and (min-width: $tablet) {
          height: auto;
-         max-height: 70%;
+         height: 70%;
      }
  }
 
@@ -177,3 +322,59 @@
      top: 0;
      z-index: 0;
  }
+
+//  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#big-board {
+    &-1{
+        position: absolute;
+        transform: scale(4);
+        top: 65%;
+        left: 25%;
+        z-index: 10;
+        width: 80px;
+        height: auto;
+        @media screen and (min-width: $tablet) {
+            top: 45%;
+            left: 10%;
+        }
+        }
+    &-2{
+        position: absolute;
+        transform: scale(4);
+        top: 65%;
+        left: 25%;
+        z-index: 10;
+        width: 80px;
+        height: auto;
+        @media screen and (min-width: $tablet) {
+            top: 45%;
+            left: 10%;
+        }
+        }
+    &-3{
+        position: absolute;
+        transform: scale(4);
+        top: 65%;
+        left: 25%;
+        z-index: 10;
+        width: 80px;
+        height: auto;
+        @media screen and (min-width: $tablet) {
+            top: 45%;
+            left: 10%;
+        }
+        }
+    &-4, &-5, &-6{
+        position: absolute;
+        transform: scale(4);
+        top: 65%;
+        right: 25%;
+        z-index: 10;
+        width: 80px;
+        height: auto;
+        @media screen and (min-width: $tablet) {
+            top: 45%;
+            right: 10%;
+        }
+        }
+    }

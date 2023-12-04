@@ -54,7 +54,7 @@
      position: absolute;
      top: 50%;
      left: 40%;
-     z-index: 11;
+     z-index: 12;
      width: 50px;
      height: auto;
      transform: scale(0.35);
@@ -325,33 +325,7 @@
 
 //  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 #big-board {
-    &-1{
-        position: absolute;
-        transform: scale(4);
-        top: 65%;
-        left: 25%;
-        z-index: 10;
-        width: 80px;
-        height: auto;
-        @media screen and (min-width: $tablet) {
-            top: 45%;
-            left: 10%;
-        }
-        }
-    &-2{
-        position: absolute;
-        transform: scale(4);
-        top: 65%;
-        left: 25%;
-        z-index: 10;
-        width: 80px;
-        height: auto;
-        @media screen and (min-width: $tablet) {
-            top: 45%;
-            left: 10%;
-        }
-        }
-    &-3{
+    &-1, &-2, &-3{
         position: absolute;
         transform: scale(4);
         top: 65%;
@@ -378,3 +352,42 @@
         }
         }
     }
+#strips {
+  &-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, &-9, &-10, &-11, &-12
+   {
+    position: absolute;
+    bottom: -120px;
+    left: 45%;
+    transform: translateX(50%) scale(1.1);
+    border-bottom: 100px solid white;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    height: 0;
+    width: 80px;
+    z-index: 11;
+  }
+  &-17 {
+    position: absolute;
+    bottom: 60px;
+    left: 45%;
+    transform: translateX(50%) scale(.7);
+    border-bottom: 100px solid white;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    height: 0;
+    width: 80px;
+    z-index: 11;
+  }
+  &-16 {
+    position: absolute;
+    bottom: 160px;
+    left: 45%;
+    transform: translateX(50%) scale(.3);
+    border-bottom: 100px solid white;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    height: 0;
+    width: 80px;
+    z-index: 11;
+  }
+}

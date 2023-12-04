@@ -40,7 +40,7 @@ canvas.to(
   0
 );
 canvas.to(
-  "#tree",
+  "#build-3",
   {
     x: 1 * speed,
     y: -0.1 * speed,
@@ -50,13 +50,18 @@ canvas.to(
   0
 );
 canvas.to(
-  "#trees",
+  "#hospital",
   {
     x: -1 * speed,
     y: -0.2 * speed,
     scale: 0.1,
     opacity: 0,
   },
+  0
+);
+canvas.to(
+  "#trees-1",
+  { x: -1 * speed, y: -0.2 * speed, scale: 0.1, opacity: 0 },
   0
 );
 canvas.from("#build-1", { opacity: 0, x: -150 }, 0);
@@ -101,9 +106,15 @@ canvas.to(
   },
   1.1
 );
-canvas.from("#build-3", { opacity: 0, x: 150 }, 1.13);
+canvas.from("#trees", { opacity: 0, x: 150 }, 2.4);
 canvas.to(
-  "#build-3",
+  "#trees",
+  { x: -1 * speed, y: -0.2 * speed, scale: 0.1, opacity: 0 },
+  2.8
+);
+canvas.from("#tree", { opacity: 0, x: 150 }, 1.13);
+canvas.to(
+  "#tree",
   { x: -1 * speed, y: -0.2 * speed, scale: 0.1, opacity: 0 },
   1.63
 );
@@ -111,36 +122,31 @@ canvas.from("#cloud-3", { opacity: 0, x: -150 }, 1.65);
 canvas.to("#cloud-3", { x: 7 * speed, scale: 0.5, duration: 2 }, 2.15);
 canvas.from("#cloud-4", { opacity: 0, x: -150 }, 1.65);
 canvas.to("#cloud-4", { x: 7 * speed, scale: 0.5, duration: 2 }, 2.15);
-canvas.from("#hospital", { opacity: 0, x: 150 }, 2.4);
-canvas.to(
-  "#hospital",
-  { x: -1 * speed, y: -0.2 * speed, scale: 0.1, opacity: 0 },
-  2.8
-);
-canvas.from("#big-board-1", { opacity: 0, x: -150 }, 0.3);
+
+canvas.from("#big-board-1", { opacity: 0, x: -150 }, 1.6);
 canvas.to(
   "#big-board-1",
   { x: kf * speed, y: 0.8 * speed, scale: 0, opacity: 0.8 },
-  0.7
+  2.1
 );
-canvas.from("#big-board-2", { opacity: 0, x: -150 }, 2.0);
+canvas.from("#big-board-2", { opacity: 0, x: -150 }, 2.3);
 canvas.to(
   "#big-board-2",
   { x: kf * speed, y: 0.8 * speed, scale: 0, opacity: 0.8 },
-  2.5
+  2.8
 );
 canvas.from("#big-board-3", { opacity: 0, x: -150 }, 3.0);
-canvas.from("#big-board-4", { opacity: 0, x: 150 }, 0.3);
+canvas.from("#big-board-4", { opacity: 0, x: 150 }, 1.6);
 canvas.to(
   "#big-board-4",
   { x: -kf * speed, y: 0.8 * speed, scale: 0, opacity: 0.8 },
-  0.7
+  2.1
 );
-canvas.from("#big-board-5", { opacity: 0, x: 150 }, 2.0);
+canvas.from("#big-board-5", { opacity: 0, x: 150 }, 2.3);
 canvas.to(
   "#big-board-5",
   { x: -kf * speed, y: 0.8 * speed, scale: 0, opacity: 0.8 },
-  2.5
+  2.8
 );
 canvas.from("#big-board-6", { opacity: 0, x: 150 }, 3.0);
 
@@ -223,7 +229,7 @@ canvas.to(
 canvas.from("#road", { height: "67%" }, 1);
 canvas.to(
   "#car",
-  { x: -1.1 * speed, y: 0.5 * speed, top: "80%", left: "30%", scale: 7.25 },
+  { x: -0.1 * speed, y: 0.03 * speed, top: "60%", left: "30%", scale: 7.25 },
   3
 );
 

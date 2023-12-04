@@ -164,7 +164,7 @@
      }
  }
 
- #tree {
+ #build-3 {
      position: absolute;
      top: 53%;
      left: 25%;
@@ -177,7 +177,7 @@
      }
  }
 
- #trees {
+ #hospital {
      position: absolute;
      top: 55%;
      right: 30%;
@@ -271,34 +271,46 @@
              width: 100px;
          }
      }
-     &-3 {
-         position: absolute;
-         top: 65%;
-         right: 20%;
-         transform: rotateY(180deg);
-         z-index: 3;
-         width: 60px;
-         height: auto;
-
-         @media screen and (min-width: $tablet) {
-             top: 63%;
-             right: 13%;
-             width: 100px;
-         }
-     }
  }
 
- #hospital {
+ #tree {
+    position: absolute;
+    top: 65%;
+    right: 20%;
+    transform: rotateY(180deg);
+    z-index: 3;
+    width: 60px;
+    height: auto;
+
+    @media screen and (min-width: $tablet) {
+        top: 63%;
+        right: 13%;
+        width: 100px;
+    }
+}
+
+ #trees {
      position: absolute;
-     top: 55%;
-     right: 0;
+     top: 50%;
+     right: 20;
      z-index: 3;
      width: 150px;
      height: auto;
+     transform: scale(0.5);
 
      @media screen and (min-width: $tablet) {
          width: 200px;
      }
+
+    &-1{
+        position: absolute;
+        top: 45%;
+        right: 30;
+        z-index: 3;
+        width: 150px;
+        height: auto; 
+        transform: scale(0.7);
+    }
  }
 
  #road {
@@ -379,6 +391,7 @@
     height: 0;
     width: 80px;
     z-index: 11;
+    opacity: 0.8;
   }
   &-16 {
     position: absolute;
@@ -391,5 +404,6 @@
     height: 0;
     width: 80px;
     z-index: 11;
+    opacity: 0.8;
   }
 }

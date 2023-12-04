@@ -36,8 +36,10 @@
 
  .canvas {
      position: fixed;
-     width: 100vw;
-     height: 100vh;
+     top: 0;
+     width: 1440px;
+     height: 760px;
+     overflow: hidden;
 
      background: rgb(240, 218, 101);
      background: linear-gradient(180deg, rgba(240, 218, 101, 1) 0%, rgba(200, 233, 148, 1) 50%, rgba(9, 92, 36, 1) 100%);

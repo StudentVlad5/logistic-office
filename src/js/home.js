@@ -133,7 +133,7 @@ canvas.from("#big-board-3", { opacity: 0, x: -150 }, 3.0);
 canvas.from("#big-board-4", { opacity: 0, x: 150 }, 0.3);
 canvas.to(
   "#big-board-4",
-  { x: -kf * speed, y: 1.1 * speed, scale: 0, opacity: 0.8 },
+  { x: -kf * speed, y: 0.8 * speed, scale: 0, opacity: 0.8 },
   0.7
 );
 canvas.from("#big-board-5", { opacity: 0, x: 150 }, 2.0);

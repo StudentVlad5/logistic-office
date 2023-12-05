@@ -186,7 +186,7 @@ canvas.to("#cloud-3", { x: 7 * speed, scale: 0.5, duration: 2 }, 2.15);
 canvas.from("#cloud-4", { opacity: 0, x: -150 }, 1.65);
 canvas.to("#cloud-4", { x: 7 * speed, scale: 0.5, duration: 2 }, 2.15);
 
-if (widthWindow >= 700) {
+if (widthWindow >= 800) {
   canvas.from("#big-board-1", { opacity: 0, x: -150 }, 1.7);
   canvas.to(
     "#big-board-1",
@@ -339,7 +339,7 @@ if (widthWindow >= 500) {
     scale: 1.8,
   });
 }
-if (widthWindow >= 700) {
+if (widthWindow >= 800) {
   canvas.from("#road", { top: "30%" }, 0.4);
 }
 

@@ -17,20 +17,23 @@ ScrollTrigger.create({
   scrub: 2.7,
 });
 
-canvas.to("#sun", { x: 9 * speed, y: 1 * speed, delay: 0.03, duration: 2 }, 0);
+// canvas.to("#sun", { x: 9 * speed, y: 1 * speed, delay: 0.03, duration: 2 }, 0);
 canvas.to("#cloud-1", { x: 10 * speed, scale: 0.5, duration: 2 }, 0);
 canvas.to("#cloud-2", { x: 10 * speed, scale: 0.5, duration: 2 }, 0);
 canvas.to("#builds", { delay: 0.03, scale: 0.8, duration: 2 }, 0);
-canvas.to("#hills-1", { x: 1 * speed, y: -0.009 * speed, duration: 2 }, 0);
-canvas.to(
-  "#hills-2",
-  {
-    x: -1 * speed,
-    y: -0.009 * speed,
-    duration: 2,
-  },
-  0
-);
+canvas.to("#hills", { scale: 0.995, duration: 1.5 }, 0);
+canvas.from("#hills", { scale: 0.995, duration: 1.5 }, 1.5);
+
+// canvas.to("#hills-1", { x: 1 * speed, y: -0.009 * speed, duration: 2 }, 0);
+// canvas.to(
+//   "#hills-2",
+//   {
+//     x: -1 * speed,
+//     y: -0.009 * speed,
+//     duration: 2,
+//   },
+//   0
+// );
 canvas.to(
   "#build-3",
   {
@@ -324,21 +327,21 @@ canvas.to(
   },
   0
 );
-if (widthWindow >= 500) {
-  canvas.to(
-    "#car",
-    { x: -0.1 * speed, y: 0.03 * speed, top: "65%", left: "45%", scale: 2.25 },
-    3
-  );
-} else {
-  canvas.to("#car", {
-    x: -0.1 * speed,
-    y: 0.03 * speed,
-    top: "70%",
-    left: "45%",
-    scale: 1.8,
-  });
-}
+// if (widthWindow >= 500) {
+//   canvas.to(
+//     "#car",
+//     { x: -0.1 * speed, y: 0.03 * speed, top: "65%", left: "45%", scale: 2.25 },
+//     3
+//   );
+// } else {
+//   canvas.to("#car", {
+//     x: -0.1 * speed,
+//     y: 0.03 * speed,
+//     top: "70%",
+//     left: "45%",
+//     scale: 1.8,
+//   });
+// }
 if (widthWindow >= 800) {
   canvas.from("#road", { top: "30%" }, 0.4);
 }

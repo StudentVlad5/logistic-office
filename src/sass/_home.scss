@@ -41,8 +41,8 @@
      height: 760px;
      overflow: hidden;
 
-     background: rgb(240, 218, 101);
-     background: linear-gradient(180deg, rgba(240, 218, 101, 1) 0%, rgba(200, 233, 148, 1) 50%, rgba(9, 92, 36, 1) 100%);
+     background: rgb(136, 204, 223);
+     background: linear-gradient(180deg, rgba(136, 204, 223, 1) 0%, rgba(200, 233, 148, 1) 50%, rgba(9, 92, 36, 1) 100%);
      background-position: center;
  }
 
@@ -54,8 +54,8 @@
 
  #car {
      position: absolute;
-     top: 50%;
-     left: 40%;
+     top: 58%;
+     left: 48%;
      z-index: 12;
      width: 50px;
      height: auto;
@@ -64,12 +64,13 @@
 
      @media screen and (min-width: $tablet) {
          top: 60%;
-         left: 47%;
+         left: 48%;
+     }
+     @media screen and (min-width: $desktop) {
+         top: 60%;
+         left: 48%;
      }
 
-     //  &.active {
-     //      animation: vibrate 2s linear infinite both;
-     //  }
  }
 
 
@@ -91,6 +92,7 @@
          width: 100px;
          height: auto;
          opacity: 0.7;
+         transform: scale(4.5);
      }
 
      &-2 {
@@ -102,6 +104,7 @@
          width: 100px;
          height: auto;
          opacity: 0.7;
+         transform: scale(2.5);
      }
 
      &-3 {
@@ -127,24 +130,26 @@
 
  #builds {
      position: absolute;
-     top: 15%;
-     left: 0;
+     width: 30%;
+     top: 48%;
+     left: 34%;
      z-index: 1;
-     width: 100%;
-     height: 50%;
-     opacity: 0.5;
+     opacity: .7;
  }
 
  #hills {
      &-1 {
          position: absolute;
          top: 45%;
-         left: -10%;
+         left: -15%;
          z-index: 2;
          width: 80%;
          height: 30%;
 
          @media screen and (min-width: $tablet) {
+             width: 70%;
+         }
+             @media screen and (min-width: $desktop) {
              width: 70%;
          }
      }
@@ -152,7 +157,7 @@
      &-2 {
          position: absolute;
          top: 45%;
-         right: -10%;
+         right: -15%;
          transform: rotateY(180deg);
          z-index: 2;
          width: 80%;
@@ -160,62 +165,123 @@
 
          @media screen and (min-width: $tablet) {
              width: 70%;
+             top: 45%;
+             right: -10%;
+         }
+         @media screen and (min-width: $desktop) {
+             width: 70%;
+             top: 45%;
+             right: -10%;
          }
      }
  }
 
- #build-3 {
+ #build {
+    &-3 {
      position: absolute;
-     top: 53%;
-     left: 25%;
-     z-index: 3;
-     width: 60px;
+     top: 32%;
+     right: 37%;
+     z-index: 12;
+     transform: scale(0.1);
      height: auto;
+     @media screen and (min-width: $tablet) {
+        transform: scale(0.1);
+     }
+    }
+    &-4 {
+        position: absolute;
+        top: 26%;
+        right: 29%;
+        z-index: 12;
+        transform: scale(0.15);
+        height: auto;
+        @media screen and (min-width: $tablet) {
+           transform: scale(0.15);
+        }
+    }
+ }
+
+ #townBilding {
+    &-1{
+     position: absolute;
+     top: 60%;
+     right: 20%;
+     z-index: 3;
+     width: 180px;
 
      @media screen and (min-width: $tablet) {
-         width: 70px;
+        top: 60%;
+        right: 20%;
      }
  }
+ &-2{
+    position: absolute;
+    top: 60%;
+    right: 20%;
+    z-index: 2;
+    width: 100px;
+    transform: scale(1.2);
 
- #hospital {
-     position: absolute;
-     top: 55%;
-     right: 30%;
-     z-index: 3;
-     width: 80px;
-     height: auto;
+    @media screen and (min-width: $tablet) {
+       top: 54%;
+       right: 30%;
+    }
+}
+&-3{
+    position: absolute;
+    top: 57%;
+    right: 32%;
+    z-index: 2;
+    width: 80px;
+    transform: scale(1.0);
+    @media screen and (min-width: $tablet) {
+        top: 55%;
+        right: 20%;
+    }
+}
+&-4{
+    position: absolute;
+    top: 57%;
+    right: 32%;
+    z-index: 2;
+    width: 70px;
+    transform: scale(.5);
+    @media screen and (min-width: $tablet) {
+        top: 56%;
+        right: 40%;
+    }
+}
  }
-
  #forest {
      &-1 {
          position: absolute;
-         top: 50%;
+         top: 60%;
          left: 0%;
          z-index: 3;
-         width: 200px;
+         width: 100px;
          height: auto;
 
          @media screen and (min-width: $tablet) {
-             width: 250px;
+             width: 100px;
          }
      }
 
      &-2 {
          position: absolute;
-         top: 50%;
+         top: 70%;
          right: 0%;
          z-index: 3;
          transform: rotateY(180deg);
-         width: 200px;
+         width: 80px;
          height: auto;
 
          @media screen and (min-width: $tablet) {
-             width: 250px;
+             width: 80px;
          }
      }
  }
 
- #billboard {
+ #moving-tree {
      &-1 {
          position: absolute;
          top: 65%;
@@ -236,11 +302,11 @@
          top: 65%;
          right: 22%;
          z-index: 3;
-         width: 70px;
+         width: 100px;
          height: auto;
 
          @media screen and (min-width: $tablet) {
-             top: 67%;
+             top: 60%;
              right: 20%;
          }
      }
@@ -315,17 +381,20 @@
 
  #road {
      position: absolute;
-     bottom: 0;
-     left: 0;
+     bottom: -20px;
+     left: 11%;
      z-index: 9;
-     width: 100%;
-     height: 65%;
+     width: 80%;
+     height: 76%;
      margin: 0 auto;
-     transform: scale(1.2);
+     transform: scale(1);
 
      @media screen and (min-width: $tablet) {
-         height: auto;
-         height: 70%;
+         height: 75%;
+         transform: scale(1.3);
+     }
+     @media screen and (min-width: $desktop) {
+         height: 75%;
      }
  }
 
@@ -341,31 +410,38 @@
 #big-board {
     &-1, &-2, &-3{
         position: absolute;
-        transform: scale(4);
-        top: 65%;
-        left: 25%;
+        top: 43%;
+        left: 46%;
         z-index: 10;
         width: 80px;
+        transform: scale(-5, 5);
         height: auto;
         @media screen and (min-width: $tablet) {
             top: 45%;
-            left: 10%;
+            left: 25%;
+        }
+        @media screen and (min-width: $desktop) {
+            top: 45%;
+            left: 25%;
         }
         }
     &-4, &-5, &-6{
         position: absolute;
-        transform: scale(4);
-        top: 65%;
-        right: 25%;
+        transform: scale(5);
+        top: 43%;
+        right: 46%;
         z-index: 10;
         width: 80px;
         height: auto;
         @media screen and (min-width: $tablet) {
             top: 45%;
-            right: 10%;
+            right: 25%;
         }
+        @media screen and (min-width: $desktop) {
+            top: 45%;
+            right: 25%;
         }
-    }
+    }}
 #strips {
   &-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, &-9, &-10, &-11, &-12
    {
@@ -406,4 +482,40 @@
     z-index: 11;
     opacity: 0.8;
   }
+}
+
+#tree {
+    &-1{
+    position: absolute;
+    top: 5%;
+    right: 50%;
+    z-index: 3;
+    transform: scale(0.1);
+    @media screen and (min-width: $tablet) {
+        top: 5%;
+        right: 50%;
+    }
+}
+&-2{
+    position: absolute;
+    top: 10%;
+    right: 57%;
+    z-index: 3;
+    transform: scale(0.1);
+    @media screen and (min-width: $tablet) {
+        top: 10%;
+        right: 57%;
+    }
+}
+&-3{
+    position: absolute;
+    top: 10%;
+    right: 57%;
+    z-index: 3;
+    transform: scale(0.2);
+    @media screen and (min-width: $tablet) {
+        top: 35%;
+        right: 70%;
+    }
+}
 }

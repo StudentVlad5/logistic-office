@@ -251,7 +251,8 @@ else {
   );
   canvas.from("#big-board-6", { opacity: 0, x: 150 }, 3);
 }
-
+canvas.from("#turnRight", { opacity: 0, x: 150 }, 3);
+canvas.from("#turnLeft", { opacity: 0, x: -150 }, 3);
 canvas.to(
   "#strips-1",
   { y: -3.3 * speed, scale: 0, opacity: 0.5, duration: 0.8 },
@@ -365,3 +366,70 @@ gsap.to("#car", {
     end: "bottom 50%+=100px",
   },
 });
+
+// 2 PATH
+const turnLeft = document.getElementById("turnLeft");
+const scene1 = document.querySelector(".canvas");
+const scene2 = document.querySelector(".canvas-2");
+
+function startScene2() {
+  scene2.classList.add("active");
+  setTimeout(() => {
+    scene1.style.display = "none";
+    window.scrollTo(0, 0);
+  }, 3000);
+  setTimeout(() => {
+    document.getElementById("car_with_driver_start").style.display = "block";
+    document.getElementById("lady_with_package").style.display = "block";
+    document.getElementById("lady_without_package").style.display = "block";
+    document.getElementById("man_with_package").style.display = "block";
+    document.getElementById("man_without_package").style.display = "block";
+    document.getElementById("car_with_dog_and_driver").style.display = "block";
+    document.getElementById("car_with_dog_and_plant_and_driver").style.display =
+      "block";
+  }, 5000);
+}
+turnLeft.onClick = startScene2;
+turnLeft.addEventListener("click", startScene2);
+
+canvas.from(
+  "#car_with_driver_start",
+  { opacity: 0.3, top: "35%", left: "-10%", scale: 2 },
+  0.5,
+  0
+);
+canvas.to(
+  "#car_with_driver_start",
+  { opacity: 0, scale: 0, duration: 0.01 },
+  1.5
+);
+canvas.from(
+  "#car_with_dog_and_driver",
+  { opacity: 0, duration: 0.01, scale: 0 },
+  1.5
+);
+canvas.to(
+  "#car_with_dog_and_driver",
+  { opacity: 0, duration: 0.01, scale: 0 },
+  1.7
+);
+canvas.from(
+  "#car_with_dog_and_plant_and_driver",
+  { opacity: 0, duration: 0.01 },
+  1.7
+);
+
+canvas.from("#lady_with_package", { opacity: 0, x: -200 }, 1, 0.5);
+canvas.to("#lady_with_package", { opacity: 0, duration: 0.01 }, 1.5);
+canvas.from("#lady_without_package", { opacity: 0, duration: 0.01 }, 1.5);
+canvas.from("#man_with_package", { opacity: 0, x: 200 }, 1, 0.5);
+canvas.to("#man_with_package", { opacity: 0, duration: 0.01 }, 1.7);
+canvas.from("#man_without_package", { opacity: 0, duration: 0.01 }, 1.7);
+canvas.to("#man_without_package", { opacity: 0, duration: 0.2 }, 1.9);
+canvas.to("#lady_without_package", { opacity: 0, duration: 0.2 }, 1.9);
+
+canvas.to(
+  "#car_with_dog_and_plant_and_driver",
+  { y: 4 * speed, duration: 1.5 },
+  2.0
+);

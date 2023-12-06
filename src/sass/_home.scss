@@ -534,3 +534,135 @@
     }
 }
 }
+#turnRight {
+    position: absolute;
+        transform: scale(2.5);
+        bottom: 20%;
+        right: 35%;
+        z-index: 10;
+        width: 80px;
+        height: auto;
+        cursor: pointer;
+        @media screen and (min-width: $tablet) {
+            right: 35%;
+        }
+        @media screen and (min-width: $desktop) {
+            right: 40%;
+        }
+}
+#turnLeft {
+    position: absolute;
+        transform: scale(-2.5, 2.5);
+        bottom: 20%;
+        left: 35%;
+        z-index: 10;
+        width: 80px;
+        height: auto;
+        cursor: pointer;
+        @media screen and (min-width: $tablet) {
+            left: 35%;
+        }
+        @media screen and (min-width: $desktop) {
+            left: 40%;
+        }
+}
+
+// 2 PATH 
+.canvas-2 {
+    position: fixed;
+    transform: translateX(-100%);
+    opacity: 0;
+    top: 0;
+    width: 1440px;
+    height: 760px;
+    overflow: hidden;
+
+    background: rgb(136, 204, 223);
+    // background: linear-gradient(180deg, rgba(136, 204, 223, 1) 0%, rgba(200, 233, 148, 1) 50%, rgba(9, 92, 36, 1) 100%);
+    background-position: center;
+}
+.canvas-2.active{
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all ;
+    // transition-duration: 5ms;
+    transition-duration: 3s;
+  
+}
+#car_with_driver_start {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    z-index: 10;
+    width: 50px;
+    height: auto;
+    transform: scale(2);
+    display: none;
+}
+#car_with_dog_and_driver{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    z-index: 10;
+    width: 50px;
+    height: auto;
+    transform: scale(2);
+    display: none;
+}
+#car_with_dog_and_plant_and_driver{
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    opacity: 1;
+    z-index: 10;
+    width: 50px;
+    height: auto;
+    transform: scale(2);
+    display: none;
+}
+#lady_with_package {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    opacity: 1;
+    z-index: 10;
+    width: 50px;
+    height: auto;
+    transform: scale(1.5);
+    display: none;
+}
+#lady_without_package {
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    opacity: 1;
+    z-index: 10;
+    width: 50px;
+    height: auto;
+    transform: scale(-0.8,0.8);
+    display: none;
+}
+#man_with_package {
+    position: absolute;
+    top: 44%;
+    right: 34%;
+    opacity: 1;
+    z-index: 10;
+    width: 50px;
+    height: auto;
+    transform: scale(-1, 1);
+    display: none;
+}
+#man_without_package {
+    position: absolute;
+    top: 42%;
+    right: 33%;
+    opacity: 1;
+    z-index: 10;
+    width: 50px;
+    height: auto;
+    transform: scale(0.65);
+    display: none;
+}

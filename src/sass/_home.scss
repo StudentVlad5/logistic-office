@@ -537,9 +537,9 @@
 #turnRight {
     position: absolute;
         transform: scale(2.5);
-        bottom: 20%;
-        right: 35%;
-        z-index: 10;
+        bottom: 13%;
+        right: 40%;
+        z-index: 15;
         width: 80px;
         height: auto;
         cursor: pointer;
@@ -547,15 +547,15 @@
             right: 35%;
         }
         @media screen and (min-width: $desktop) {
-            right: 40%;
+            right: 30%;
         }
 }
 #turnLeft {
     position: absolute;
         transform: scale(-2.5, 2.5);
-        bottom: 20%;
-        left: 35%;
-        z-index: 10;
+        bottom: 13%;
+        left: 40%;
+        z-index: 15;
         width: 80px;
         height: auto;
         cursor: pointer;
@@ -563,7 +563,7 @@
             left: 35%;
         }
         @media screen and (min-width: $desktop) {
-            left: 40%;
+            left: 30%;
         }
 }
 

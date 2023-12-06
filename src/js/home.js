@@ -5,6 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({ ease: "none" });
 let speed = 100;
 const widthWindow = window.innerWidth;
+const kf = widthWindow / 800;
 
 let canvas = gsap.timeline();
 ScrollTrigger.create({
@@ -13,33 +14,28 @@ ScrollTrigger.create({
   toggleActions: "restart reverse",
   start: "top top",
   end: "bottom 50%+=100px",
-  scrub: 3,
+  scrub: 2.7,
 });
 
-// if (widthWindow < 500) {
-//   canvas.to('#car', { x: -1.2 * speed, y: 1 * speed, scale: 2.5 }, 0);
-//   canvas.to('#road', { delay: 0.03, scale: 1.5 }, 0);
-// } else {
-//   canvas.to('#car', { x: -3.75 * speed, y: 1 * speed, scale: 6.5 }, 0);
-//   canvas.to('#road', { y: -1 * speed, delay: 0.03, scale: 1.5 }, 0);
-// }
-
-canvas.to("#sun", { x: 9 * speed, y: 1 * speed, delay: 0.03, duration: 2 }, 0);
+// canvas.to("#sun", { x: 9 * speed, y: 1 * speed, delay: 0.03, duration: 2 }, 0);
 canvas.to("#cloud-1", { x: 10 * speed, scale: 0.5, duration: 2 }, 0);
 canvas.to("#cloud-2", { x: 10 * speed, scale: 0.5, duration: 2 }, 0);
 canvas.to("#builds", { delay: 0.03, scale: 0.8, duration: 2 }, 0);
-canvas.to("#hills-1", { x: 1 * speed, y: -0.009 * speed, duration: 2 }, 0);
+canvas.to("#hills", { scale: 1.095, duration: 1.5 }, 0);
+canvas.from("#hills", { scale: 1.095, duration: 1.5 }, 1.5);
+
+// canvas.to("#hills-1", { x: 1 * speed, y: -0.009 * speed, duration: 2 }, 0);
+// canvas.to(
+//   "#hills-2",
+//   {
+//     x: -1 * speed,
+//     y: -0.009 * speed,
+//     duration: 2,
+//   },
+//   0
+// );
 canvas.to(
-  "#hills-2",
-  {
-    x: -1 * speed,
-    y: -0.009 * speed,
-    duration: 2,
-  },
-  0
-);
-canvas.to(
-  "#tree",
+  "#build-3",
   {
     x: 1 * speed,
     y: -0.1 * speed,
@@ -49,36 +45,112 @@ canvas.to(
   0
 );
 canvas.to(
-  "#trees",
+  "#build-4",
   {
-    x: -1 * speed,
+    x: 1 * speed,
+    y: -0.1 * speed,
+    scale: 0.1,
+    opacity: 0,
+  },
+  0
+);
+canvas.to(
+  "#tree-1",
+  {
+    x: 1 * speed,
+    y: -0.1 * speed,
+    scale: 0.1,
+    opacity: 0,
+  },
+  0
+);
+canvas.to(
+  "#tree-2",
+  {
+    x: 1 * speed,
+    y: -0.1 * speed,
+    scale: 0.1,
+    opacity: 0,
+  },
+  0
+);
+canvas.to(
+  "#tree-3",
+  {
+    x: 1 * speed,
+    y: -0.1 * speed,
+    scale: 0.1,
+    opacity: 0,
+  },
+  0
+);
+canvas.to(
+  "#townBilding-1",
+  {
+    x: -2 * speed,
     y: -0.2 * speed,
     scale: 0.1,
     opacity: 0,
   },
   0
 );
-canvas.from("#build-1", { opacity: 0, x: -150 }, 0);
+canvas.to(
+  "#townBilding-2",
+  {
+    x: -2 * speed,
+    y: -0.2 * speed,
+    scale: 0.1,
+    opacity: 0,
+  },
+  0
+);
+canvas.to(
+  "#townBilding-3",
+  {
+    x: -2 * speed,
+    y: -0.2 * speed,
+    scale: 0.1,
+    opacity: 0,
+  },
+  0
+);
+canvas.to(
+  "#townBilding-4",
+  {
+    x: -0.1 * speed,
+    y: -0.05 * speed,
+    scale: 0,
+    opacity: 0,
+    duration: 0.2,
+  },
+  0
+);
+canvas.to(
+  "#trees-1",
+  { x: -1.1 * speed, y: -0.1 * speed, scale: 0.1, opacity: 0 },
+  0
+);
+canvas.from("#build-1", { opacity: 0, x: -150 }, 0.3);
 canvas.to(
   "#build-1",
   { x: 1 * speed, y: -0.2 * speed, scale: 0.1, opacity: 0 },
-  0.5
+  0.8
 );
-canvas.from("#build-2", { opacity: 0, x: 150 }, 0);
+canvas.from("#build-2", { opacity: 0, x: 150 }, 0.3);
 canvas.to(
   "#build-2",
   { x: -1 * speed, y: -0.2 * speed, scale: 0.1, opacity: 0 },
-  0.5
+  0.8
 );
-canvas.from("#billboard-1", { opacity: 0, x: -150 }, 0.53);
+canvas.from("#moving-tree-1", { opacity: 0, x: -150 }, 0.53);
 canvas.to(
-  "#billboard-1",
+  "#moving-tree-1",
   { x: 1 * speed, y: -0.2 * speed, scale: 0.1, opacity: 0 },
   1.03
 );
-canvas.from("#billboard-2", { opacity: 0, x: 150 }, 0.53);
+canvas.from("#moving-tree-2", { opacity: 0, x: 150 }, 0.53);
 canvas.to(
-  "#billboard-2",
+  "#moving-tree-2",
   { x: -1 * speed, y: -0.2 * speed, scale: 0.1, opacity: 0 },
   1.03
 );
@@ -100,9 +172,15 @@ canvas.to(
   },
   1.1
 );
-canvas.from("#build-3", { opacity: 0, x: 150 }, 1.13);
+canvas.from("#trees", { opacity: 0, x: 150 }, 2.4);
 canvas.to(
-  "#build-3",
+  "#trees",
+  { x: -1 * speed, y: -0.1 * speed, scale: 0.1, opacity: 0 },
+  2.8
+);
+canvas.from("#tree", { opacity: 0, x: 150 }, 1.13);
+canvas.to(
+  "#tree",
   { x: -1 * speed, y: -0.2 * speed, scale: 0.1, opacity: 0 },
   1.63
 );
@@ -110,45 +188,166 @@ canvas.from("#cloud-3", { opacity: 0, x: -150 }, 1.65);
 canvas.to("#cloud-3", { x: 7 * speed, scale: 0.5, duration: 2 }, 2.15);
 canvas.from("#cloud-4", { opacity: 0, x: -150 }, 1.65);
 canvas.to("#cloud-4", { x: 7 * speed, scale: 0.5, duration: 2 }, 2.15);
-canvas.from("#hospital", { opacity: 0, x: 150 }, 1.65);
-canvas.to(
-  "#hospital",
-  { x: -1 * speed, y: -0.2 * speed, scale: 0.1, opacity: 0 },
-  2.15
-);
-canvas.from("#big-board-1", { opacity: 0, x: -150 }, 0.01);
-canvas.to(
-  "#big-board-1",
-  { x: 4.4 * speed, y: 1.1 * speed, scale: 0, opacity: 0.8 },
-  0.5
-);
-canvas.from("#big-board-2", { opacity: 0, x: -150 }, 0.83);
-canvas.to(
-  "#big-board-2",
-  { x: 4.4 * speed, y: 1.1 * speed, scale: 0, opacity: 0.8 },
-  1.33
-);
-canvas.from("#big-board-3", { opacity: 0, x: -150 }, 2);
-canvas.from("#big-board-4", { opacity: 0, x: 150 }, 0.01);
-canvas.to(
-  "#big-board-4",
-  { x: -4.4 * speed, y: 1.1 * speed, scale: 0, opacity: 0.8 },
-  0.5
-);
-canvas.from("#big-board-5", { opacity: 0, x: 150 }, 0.83);
-canvas.to(
-  "#big-board-5",
-  { x: -4.4 * speed, y: 1.1 * speed, scale: 0, opacity: 0.8 },
-  1.33
-);
-canvas.from("#big-board-6", { opacity: 0, x: 150 }, 2);
 
-canvas.from("#road", { height: "67%" }, 1);
+if (widthWindow >= 800) {
+  canvas.from("#big-board-1", { opacity: 0, x: -150 }, 1.7);
+  canvas.to(
+    "#big-board-1",
+    { x: kf * speed, y: 0.8 * speed, scale: 0, opacity: 0.8 },
+    2.1
+  );
+  canvas.from("#big-board-2", { opacity: 0, x: -150 }, 2.3);
+  canvas.to(
+    "#big-board-2",
+    { x: kf * speed, y: 0.8 * speed, scale: 0, opacity: 0.8 },
+    2.8
+  );
+  canvas.from("#big-board-3", { opacity: 0, x: -150 }, 3.0);
+  canvas.from("#big-board-4", { opacity: 0, x: 150 }, 1.7);
+  canvas.to(
+    "#big-board-4",
+    { x: -kf * speed, y: 0.8 * speed, scale: 0, opacity: 0.8 },
+    2.1
+  );
+  canvas.from("#big-board-5", { opacity: 0, x: 150 }, 2.3);
+  canvas.to(
+    "#big-board-5",
+    { x: -kf * speed, y: 0.8 * speed, scale: 0, opacity: 0.8 },
+    2.8
+  );
+  canvas.from("#big-board-6", { opacity: 0, x: 150 }, 3.0);
+}
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+else {
+  canvas.from("#big-board-1", { opacity: 0, x: -150 }, 0.8);
+  canvas.to(
+    "#big-board-1",
+    { x: (kf / 300) * speed, y: 0.9 * speed, scale: 0, opacity: 0.8 },
+    1.1
+  );
+  canvas.from("#big-board-2", { opacity: 0, x: -150 }, 1.6);
+  canvas.to(
+    "#big-board-2",
+    { x: (kf / 300) * speed, y: 0.9 * speed, scale: 0, opacity: 0.8 },
+    1.9
+  );
+  canvas.from("#big-board-3", { opacity: 0, x: -150 }, 2.3);
+  canvas.to(
+    "#big-board-3",
+    { x: (kf / 300) * speed, y: 0.9 * speed, scale: 0, opacity: 0.8 },
+    2.6
+  );
+  canvas.from("#big-board-4", { opacity: 0, x: 150 }, 1.2);
+  canvas.to(
+    "#big-board-4",
+    { x: (-kf / 300) * speed, y: 0.9 * speed, scale: 0, opacity: 0.8 },
+    1.5
+  );
+  canvas.from("#big-board-5", { opacity: 0, x: 150 }, 2.0);
+  canvas.to(
+    "#big-board-5",
+    { x: (-kf / 300) * speed, y: 0.9 * speed, scale: 0, opacity: 0.8 },
+    2.3
+  );
+  canvas.from("#big-board-6", { opacity: 0, x: 150 }, 3);
+}
+
 canvas.to(
-  "#car",
-  { x: -1.1 * speed, y: 0.8 * speed, top: "80%", left: "30%", scale: 7.25 },
-  2
+  "#strips-1",
+  { y: -3.3 * speed, scale: 0, opacity: 0.5, duration: 0.8 },
+  0
 );
+canvas.to(
+  "#strips-2",
+  { y: -3.3 * speed, scale: 0, opacity: 0.5, duration: 0.8 },
+  0.3
+);
+canvas.to(
+  "#strips-3",
+  { y: -3.3 * speed, scale: 0, opacity: 0.5, duration: 0.8 },
+  0.6
+);
+canvas.to(
+  "#strips-4",
+  { y: -3.3 * speed, scale: 0, opacity: 0.5, duration: 0.8 },
+  0.9
+);
+canvas.to(
+  "#strips-5",
+  { y: -3.3 * speed, scale: 0, opacity: 0.5, duration: 0.8 },
+  1.2
+);
+canvas.to(
+  "#strips-6",
+  { y: -3.3 * speed, scale: 0, opacity: 0.5, duration: 0.8 },
+  1.5
+);
+canvas.to(
+  "#strips-7",
+  { y: -3.3 * speed, scale: 0, opacity: 0.5, duration: 0.8 },
+  1.8
+);
+canvas.to(
+  "#strips-8",
+  { y: -3.3 * speed, scale: 0, opacity: 0.5, duration: 0.8 },
+  2.1
+);
+canvas.to(
+  "#strips-9",
+  { y: -3.3 * speed, scale: 0, opacity: 0.5, duration: 0.8 },
+  2.4
+);
+canvas.to(
+  "#strips-10",
+  { y: -3.3 * speed, scale: 0, opacity: 0.5, duration: 0.8 },
+  2.7
+);
+canvas.to(
+  "#strips-11",
+  { bottom: "160px", scale: 0.3, opacity: 0.5, duration: 0.8 },
+  3.0
+);
+canvas.to(
+  "#strips-12",
+  { bottom: "60px", scale: 1, opacity: 0.5, duration: 0.8 },
+  3.3
+);
+canvas.to(
+  "#strips-16",
+  { y: -0.7 * speed, scale: 0, opacity: 0.5, duration: 0.3 },
+  0
+);
+canvas.to(
+  "#strips-17",
+  {
+    y: -1.5 * speed,
+    scale: 0,
+    opacity: 0.5,
+    duration: 0.6,
+  },
+  0
+);
+// if (widthWindow >= 500) {
+//   canvas.to(
+//     "#car",
+//     { x: -0.1 * speed, y: 0.03 * speed, top: "65%", left: "45%", scale: 2.25 },
+//     3
+//   );
+// } else {
+//   canvas.to("#car", {
+//     x: -0.1 * speed,
+//     y: 0.03 * speed,
+//     top: "70%",
+//     left: "45%",
+//     scale: 1.8,
+//   });
+// }
+if (widthWindow >= 800) {
+  canvas.from("#road", { top: "31%", duration: 2 }, 0.4);
+  canvas.to("#road", { top: "30%" }, 2.4);
+} else {
+  canvas.from("#road", { top: "28%" }, 0.4);
+}
 
 gsap.to("#car", {
   keyframes: {

@@ -592,35 +592,45 @@
 #car_with_driver_start {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 48.5%;
     opacity: 1;
     z-index: 10;
     width: 50px;
     height: auto;
     transform: scale(2);
     display: none;
+    @media screen and (min-width: $tablet) {
+        left: 50%;
+    }
+    
 }
 #car_with_dog_and_driver{
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 48.5%;
     opacity: 1;
     z-index: 10;
     width: 50px;
     height: auto;
     transform: scale(2);
     display: none;
+    @media screen and (min-width: $tablet) {
+        left: 50%;
+    }
 }
 #car_with_dog_and_plant_and_driver{
     position: absolute;
     top: 47%;
-    left: 50%;
+    left: 48.5%;
     opacity: 1;
     z-index: 10;
     width: 50px;
     height: auto;
     transform: scale(2);
     display: none;
+    @media screen and (min-width: $tablet) {
+        left: 50%;
+    }
 }
 #lady_with_package {
     position: absolute;
@@ -647,22 +657,28 @@
 #man_with_package {
     position: absolute;
     top: 44%;
-    right: 34%;
+    right: 40%;
     opacity: 1;
     z-index: 10;
     width: 50px;
     height: auto;
     transform: scale(-1, 1);
     display: none;
+    @media screen and (min-width: $tablet) {
+        right: 34%;
+    }
 }
 #man_without_package {
     position: absolute;
     top: 42%;
-    right: 33%;
+    right: 39%;
     opacity: 1;
     z-index: 10;
     width: 50px;
     height: auto;
     transform: scale(0.65);
     display: none;
+    @media screen and (min-width: $tablet) {
+        right: 33%;
+    }
 }

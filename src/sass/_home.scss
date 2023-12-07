@@ -74,6 +74,34 @@
      }
 
  }
+ #car_turn_left {
+     position: absolute;
+     top: 63%;
+     left: 45%;
+     z-index: 12;
+     width: 50px;
+     height: auto;
+     transform: scale(-3, 3);
+     display: none;
+
+     @media screen and (min-width: $tablet) {
+         top: 66%;
+         left: 45%;
+         transform: scale(-3.0, 3);
+     }
+     @media screen and (min-width: $desktop) {
+         top: 70%;
+         left: 42%;
+         transform: scale(-3.5, 3.5);
+     }
+
+ }
+ #car_turn_left.active {
+    left: 0;
+    top: 90%;
+    transition: all 5s cubic-bezier(0, 0, 1, 1);
+
+ }
 
 
 //  #sun {

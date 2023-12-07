@@ -383,9 +383,18 @@ gsap.to("#car", {
 const turnLeft = document.getElementById("turnLeft");
 const scene1 = document.querySelector(".canvas");
 const scene2 = document.querySelector(".canvas-2");
+const car_turn_left = document.getElementById("car_turn_left");
+console.log(car_turn_left);
+const car = document.getElementById("car");
 
 function startScene2() {
   scene2.classList.add("active");
+  car_turn_left.style.display = "block";
+  car.style.display = "none";
+  setTimeout(() => {
+    car_turn_left.classList.add("active");
+  }, 100);
+
   setTimeout(() => {
     scene1.style.display = "none";
     window.scrollTo(0, 0);

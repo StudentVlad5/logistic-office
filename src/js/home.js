@@ -356,8 +356,8 @@ canvas.to(
 //   });
 // }
 if (widthWindow >= 800) {
-  canvas.from("#road", { top: "31%", duration: 2 }, 0.4);
-  canvas.to("#road", { top: "30%" }, 2.4);
+  canvas.from("#road", { top: "51%", duration: 2 }, 0.4);
+  canvas.to("#road", { top: "34%" }, 2.4);
 } else {
   canvas.from("#road", { top: "28%" }, 0.4);
 }

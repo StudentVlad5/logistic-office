@@ -432,12 +432,11 @@ $desktop: 1440px;
 
 #road {
   position: absolute;
-  bottom: -158px;
+  bottom: -20%;
   left: 1.5%;
   width: 100%;
   z-index: 9;
-  margin: 0 auto;
-  transform: scale(0.5);
+  transform: scale(0.6);
 
   @media screen and (min-width: $tablet) {
     bottom: -47%;
@@ -453,18 +452,16 @@ $desktop: 1440px;
   position: absolute;
   bottom: -28%;
   z-index: 9;
-  width: 984px;
-  left: 244px;
+  width: 100%;
 
-  @media screen and (min-width: 1028px) {
+  @media screen and (min-width: $tablet) {
     left: 0;
     width: 100%;
   }
-  // @media screen and (min-width: $desktop) {
-  //   // bottom: -28%;
-  //   left: 0;
-  //   width: 100%;
-  // }
+  @media screen and (min-width: $desktop) {
+    left: 0;
+    width: 100%;
+  }
 }
 
 .scrollElement {

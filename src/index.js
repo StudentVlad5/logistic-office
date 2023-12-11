@@ -1,2 +1,2 @@
-import './js/home';
-// import './js/codepen';
+// import './js/home';
+import './js/codepen';

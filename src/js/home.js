@@ -419,14 +419,26 @@ function startScene2() {
     document.getElementById("car_with_dog_and_driver").style.display = "block";
     document.getElementById("car_with_dog_and_plant_and_driver").style.display =
       "block";
+    document.getElementById("car_with_driver_").style.display = "block";
+    document.getElementById("group_town").style.display = "block";
+    document.getElementById("villige").style.display = "block";
+    document.getElementById("canvas-2_3").style.display = "flex";
+    document.getElementById("fonOfRoad").style.display = "flex";
+    document.getElementById("fonOfRoad_1").style.display = "flex";
+    document.getElementById("road_0").style.display = "block";
+    document.getElementById("road_1").style.display = "block";
+    document.getElementById("road_trees").style.display = "block";
+    document.getElementById("road_tree").style.display = "block";
+    document.getElementById("forest_1").style.display = "block";
+    document.getElementById("forest_2").style.display = "block";
   }, 5000);
 }
 turnLeft.onClick = startScene2;
 turnLeft.addEventListener("click", startScene2);
 
 canvas.from(
-  "#car_with_driver_start",
-  { opacity: 0.3, top: "35%", left: "-10%", scale: 2 },
+  "#car_with_driver_",
+  { opacity: 0.3, bottom: "35%", left: "50%", scale: 0.2 },
   0.5,
   0
 );
@@ -477,3 +489,6 @@ canvas.to(
   { y: 4 * speed, duration: 1.5 },
   2.0
 );
+
+canvas.to("#canvas-2_2", { opacity: 1, y: 0, duration: 1.5 }, 0.5);
+canvas.to("#canvas-2_3", { opacity: 1, y: -0.5 * speed }, 2.5);

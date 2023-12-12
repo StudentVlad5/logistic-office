@@ -645,10 +645,10 @@ $desktop: 1440px;
   opacity: 0;
   top: 0;
   width: 1440px;
-  height: 760px;
+  height: 100%;
   overflow: hidden;
 
-  background: rgb(136, 204, 223);
+  // background: rgb(136, 204, 223);
   // background: linear-gradient(180deg, rgba(136, 204, 223, 1) 0%, rgba(200, 233, 148, 1) 50%, rgba(9, 92, 36, 1) 100%);
   background-position: center;
 }
@@ -658,6 +658,58 @@ $desktop: 1440px;
   transition: all;
   // transition-duration: 5ms;
   transition-duration: 3s;
+}
+
+.canvas-2_1{
+  position: fixed;
+  opacity: 1;
+  top: 0;
+  width: 1440px;
+  height: 760px;
+  overflow: hidden;
+
+  background: rgb(136, 204, 223);
+  background-position: center;
+}
+.canvas-2_2{
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  width: 1440px;
+  height: 760px;
+  overflow: hidden;
+  transform: translateY(100%);
+
+  background: rgb(136, 204, 223);
+  background-position: center;
+}
+.canvas-2_3{
+  position: fixed;
+  flex-direction: column;
+  justify-content: start;
+  opacity: 0;
+  top: 0;
+  width: 1440px;
+  height: 100%;
+  overflow: hidden;
+  transform: translateY(760px);
+
+  background: rgb(136, 204, 223);
+  background-position: center;
+}
+
+#car_with_driver_ {
+  position: absolute;
+  bottom: 0%;
+  left: 48.5%;
+  opacity: 1;
+  z-index: 22;
+  width: 50px;
+  transform: scale(2);
+  display: none;
+  @media screen and (min-width: $tablet) {
+    left: 45%;
+  }
 }
 #car_with_driver_start {
   position: absolute;
@@ -775,4 +827,184 @@ $desktop: 1440px;
   @media screen and (min-width: $tablet) {
     right: 33%;
   }
+}
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#cloud_2_1{
+  position: absolute;
+  top: 12%;
+  left: 40%;
+  opacity: 1;
+  z-index: 10;
+  height: auto;
+  transform: scale(-0.65, 0.65);
+  // display: none;
+  @media screen and (min-width: $tablet) {
+    right: 33%;
+  }
+}
+#cloud_2_2{
+  position: absolute;
+  top: 22%;
+  right: 15%;
+  opacity: 1;
+  z-index: 10;
+  height: auto;
+  transform: scale(0.45);
+  // display: none;
+  @media screen and (min-width: $tablet) {
+    right: 33%;
+  }
+}
+#hills_2_1{
+  position: absolute;
+  top: 42%;
+  opacity: 1;
+  z-index: 10;
+  height: auto;
+  // transform: scale(0.45);
+  // display: none;
+  @media screen and (min-width: $tablet) {
+    // right: 33%;
+  }
+}
+#hills_2_2{
+  position: absolute;
+  bottom: 0%;
+  opacity: 1;
+  z-index: 11;
+  height: auto;
+  width: 117%;
+    height: 57%;
+    left: -8%;
+  // transform: scale(0.45);
+  // display: none;
+  @media screen and (min-width: $tablet) {
+    // right: 33%;
+  }
+}
+#direct_road{
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: 0 auto;
+  opacity: 1;
+  z-index: 20;
+  height: auto;
+  // transform: scale(0.45);
+  // display: none;
+  @media screen and (min-width: $tablet) {
+    // right: 33%;
+  }
+}
+#far_road{
+  position: absolute;
+  bottom: 33%;
+  left: 55%;
+  transform: translate(-50%, 50%);
+  margin: 0 auto;
+  opacity: 1;
+  z-index: 10;
+  height: auto;
+  // transform: scale(0.45);
+  // display: none;
+  @media screen and (min-width: $tablet) {
+    // right: 33%;
+  }
+}
+#forest{
+  position: absolute;
+  bottom: 42%;
+  left: 51%;
+  transform: translate(-50%, 50%);
+  margin: 0 auto;
+  opacity: 1;
+  z-index: 10;
+  height: auto;
+  // transform: scale(0.45);
+  // display: none;
+  @media screen and (min-width: $tablet) {
+    // right: 33%;
+  }
+}
+#bushes{
+  position: absolute;
+  bottom: 20%;
+  right: 0%;
+  opacity: 1;
+  z-index: 12;
+  height: auto;
+  width: 200px;
+  // transform: scale(0.45);
+  // display: none;
+  @media screen and (min-width: $tablet) {
+    // right: 33%;
+    width: 400px;
+  }
+}
+#light_box{
+  position: absolute;
+  bottom: 0%;
+  left: 20%;
+  opacity: 1;
+  z-index: 11;
+  height: auto;
+  transform: scale(0.45);
+  // display: none;
+  @media screen and (min-width: $tablet) {
+    // right: 33%;
+  }
+}
+
+#villige{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+#group_town{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+.fonOfRoad{
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 514px;
+  background-color: #96C22F;
+}
+.fonOfRoad_1{
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #96C22F;
+
+}
+#road_0{
+  display: none;
+}
+.item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#road_trees,
+#forest_2,
+#forest_1,
+#road_tree{
+  display: none;
+  width: 100%;
+}
+.item.grass-fon{
+background-image: url('../images/svg_4/grass_fon.svg');
 }

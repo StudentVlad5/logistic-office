@@ -51,7 +51,6 @@ $desktop: 1440px;
   background-position: center;
 }
 
-
 #car {
   position: absolute;
   top: 63%;
@@ -655,7 +654,7 @@ $desktop: 1440px;
   transition-duration: 3s;
 }
 
-.canvas-2_1{
+.canvas-2_1 {
   position: fixed;
   opacity: 1;
   top: 0;
@@ -666,7 +665,7 @@ $desktop: 1440px;
   background: rgb(136, 204, 223);
   background-position: center;
 }
-.canvas-2_2{
+.canvas-2_2 {
   position: fixed;
   opacity: 0;
   top: 0;
@@ -678,9 +677,9 @@ $desktop: 1440px;
   background-image: url('../images/svg_4/fon_0.svg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;  
+  background-position: center center;
 }
-.canvas-2_3{
+.canvas-2_3 {
   position: fixed;
   flex-direction: column;
   justify-content: start;
@@ -688,18 +687,17 @@ $desktop: 1440px;
   opacity: 1;
   top: 0;
   width: 1440px;
-  overflow-x:hidden;
+  overflow-x: hidden;
   // transform: translateY(100%);
-  overflow-y:scroll;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   background: rgb(136, 204, 223);
   background-position: center;
 }
 .canvas-2_3::-webkit-scrollbar {
   display: none;
 }
-
 
 #car_with_driver_ {
   position: absolute;
@@ -833,7 +831,7 @@ $desktop: 1440px;
 }
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-#cloud_2_1{
+#cloud_2_1 {
   position: absolute;
   top: 12%;
   left: 40%;
@@ -846,7 +844,7 @@ $desktop: 1440px;
     right: 33%;
   }
 }
-#cloud_2_2{
+#cloud_2_2 {
   position: absolute;
   top: 22%;
   right: 15%;
@@ -859,7 +857,7 @@ $desktop: 1440px;
     right: 33%;
   }
 }
-#hills_2_1{
+#hills_2_1 {
   position: absolute;
   top: 42%;
   opacity: 1;
@@ -871,22 +869,22 @@ $desktop: 1440px;
     // right: 33%;
   }
 }
-#hills_2_2{
+#hills_2_2 {
   position: absolute;
   bottom: 0%;
   opacity: 1;
   z-index: 11;
   height: auto;
   width: 117%;
-    height: 57%;
-    left: -8%;
+  height: 57%;
+  left: -8%;
   // transform: scale(0.45);
   // display: none;
   @media screen and (min-width: $tablet) {
     // right: 33%;
   }
 }
-#direct_road{
+#direct_road {
   position: absolute;
   bottom: 0%;
   left: 50%;
@@ -901,10 +899,10 @@ $desktop: 1440px;
     // right: 33%;
   }
 }
-#far_road{
+#far_road {
   position: absolute;
   bottom: 33%;
-  left: 55%;
+  left: 55.2%;
   transform: translate(-50%, 50%);
   margin: 0 auto;
   opacity: 1;
@@ -916,7 +914,7 @@ $desktop: 1440px;
     // right: 33%;
   }
 }
-#forest{
+#forest {
   position: absolute;
   bottom: 42%;
   left: 51%;
@@ -931,7 +929,7 @@ $desktop: 1440px;
     // right: 33%;
   }
 }
-#bushes{
+#bushes {
   position: absolute;
   bottom: 20%;
   right: 0%;
@@ -946,7 +944,7 @@ $desktop: 1440px;
     width: 400px;
   }
 }
-#light_box{
+#light_box {
   position: absolute;
   bottom: 0%;
   left: 20%;
@@ -965,8 +963,7 @@ $desktop: 1440px;
 #road_2,
 #road_3,
 #road_4,
-#road_5
- {
+#road_5 {
   display: none;
   // width: 100%;
 }
@@ -975,15 +972,14 @@ $desktop: 1440px;
   display: none;
   width: 100%;
 }
-.fonOfRoad{
+.fonOfRoad {
   position: relative;
   display: none;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 514px;
-  background-color: #96C22F;
-
+  background-color: #96c22f;
 }
 .fonOfRoad_1 {
   position: relative;
@@ -991,12 +987,11 @@ $desktop: 1440px;
   justify-content: center;
   align-items: start;
   width: 100%;
-  background-color: #96C22F;
+  background-color: #96c22f;
   background-image: url('../images/svg_4/fon_1.svg');
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: center center;  
-
+  background-position: center center;
 }
 .fonOfRoad_2 {
   position: relative;
@@ -1004,11 +999,11 @@ $desktop: 1440px;
   justify-content: center;
   align-items: start;
   width: 100%;
-  background-color: #96C22F;
+  background-color: #96c22f;
   background-image: url('../images/svg_4/fon_2.svg');
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: center center;   
+  background-position: center center;
 }
 .fonOfRoad_3 {
   position: relative;
@@ -1016,11 +1011,11 @@ $desktop: 1440px;
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #96C22F;
+  background-color: #96c22f;
   background-image: url('../images/svg_4/fon_3.svg');
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: center center;     
+  background-position: center center;
 }
 .fonOfRoad_4 {
   position: relative;
@@ -1028,11 +1023,11 @@ $desktop: 1440px;
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #96C22F;
+  background-color: #96c22f;
   background-image: url('../images/svg_4/fon_3_5.svg');
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: center center; 
+  background-position: center center;
 }
 .fonOfRoad_5 {
   position: relative;
@@ -1040,22 +1035,22 @@ $desktop: 1440px;
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #96C22F;
+  background-color: #96c22f;
   background-image: url('../images/svg_4/fon_4.svg');
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: center center;  
+  background-position: center center;
 }
 
-.item{
+.item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.item.road_2{
-transform: translateX(-5px);
+.item.road_2 {
+  transform: translateX(-5px);
 }
 #road_river_right,
 #road_river_left,
@@ -1065,5 +1060,3 @@ transform: translateX(-5px);
   width: 100%;
   position: relative;
 }
-
-

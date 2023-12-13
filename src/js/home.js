@@ -419,8 +419,6 @@ function startScene2() {
     document.getElementById("car_with_dog_and_plant_and_driver").style.display =
       "block";
     document.getElementById("car_with_driver_").style.display = "block";
-    document.getElementById("group_town").style.display = "block";
-    document.getElementById("villige").style.display = "block";
     document.getElementById("canvas-2_3").style.display = "flex";
     document.getElementById("movie_road").style.display = "block";
     document.getElementById("fonOfRoad").style.display = "flex";

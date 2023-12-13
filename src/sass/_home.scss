@@ -675,8 +675,10 @@ $desktop: 1440px;
   overflow: hidden;
   transform: translateY(100%);
 
-  background: rgb(136, 204, 223);
-  background-position: center;
+  background-image: url('../images/svg_4/fon_0.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;  
 }
 .canvas-2_3{
   position: fixed;
@@ -958,19 +960,6 @@ $desktop: 1440px;
   }
 }
 
-#villige{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: none;
-}
-#group_town{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  display: none;
-}
-
 #road_0,
 #road_1,
 #road_2,
@@ -994,6 +983,7 @@ $desktop: 1440px;
   width: 100%;
   height: 514px;
   background-color: #96C22F;
+
 }
 .fonOfRoad_1 {
   position: relative;

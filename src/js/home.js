@@ -423,10 +423,16 @@ function startScene2() {
     document.getElementById("group_town").style.display = "block";
     document.getElementById("villige").style.display = "block";
     document.getElementById("canvas-2_3").style.display = "flex";
+    document.getElementById("movie_road").style.display = "block";
     document.getElementById("fonOfRoad").style.display = "flex";
     document.getElementById("fonOfRoad_1").style.display = "flex";
+    document.getElementById("fonOfRoad_2").style.display = "flex";
     document.getElementById("road_0").style.display = "block";
     document.getElementById("road_1").style.display = "block";
+    document.getElementById("road_2").style.display = "block";
+    document.getElementById("road_3").style.display = "block";
+    document.getElementById("road_4").style.display = "block";
+    document.getElementById("road_5").style.display = "block";
     document.getElementById("road_trees").style.display = "block";
     document.getElementById("road_tree").style.display = "block";
     document.getElementById("forest_1").style.display = "block";
@@ -491,4 +497,5 @@ canvas.to(
 );
 
 canvas.to("#canvas-2_2", { opacity: 1, y: 0, duration: 1.5 }, 0.5);
-canvas.to("#canvas-2_3", { opacity: 1, y: -0.5 * speed }, 2.5);
+canvas.from("#canvas-2_3", { opacity: 0, top: "100%" }, 2.5);
+canvas.from("#movie_road", { opacity: 1, y: -0.5 * speed }, 2.6);

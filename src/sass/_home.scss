@@ -51,11 +51,6 @@ $desktop: 1440px;
   background-position: center;
 }
 
-//  .screen2,
-//  .screen3,
-//  .screen4 {
-//      visibility: hidden;
-//  }
 
 #car {
   position: absolute;
@@ -687,16 +682,22 @@ $desktop: 1440px;
   position: fixed;
   flex-direction: column;
   justify-content: start;
-  opacity: 0;
+  height: 760px;
+  opacity: 1;
   top: 0;
   width: 1440px;
-  height: 100%;
-  overflow: hidden;
-  transform: translateY(760px);
-
+  overflow-x:hidden;
+  // transform: translateY(100%);
+  overflow-y:scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
   background: rgb(136, 204, 223);
   background-position: center;
 }
+.canvas-2_3::-webkit-scrollbar {
+  display: none;
+}
+
 
 #car_with_driver_ {
   position: absolute;
@@ -969,6 +970,22 @@ $desktop: 1440px;
   right: 0;
   display: none;
 }
+
+#road_0,
+#road_1,
+#road_2,
+#road_3,
+#road_4,
+#road_5
+ {
+  display: none;
+  // width: 100%;
+}
+
+.movie_road {
+  display: none;
+  width: 100%;
+}
 .fonOfRoad{
   position: relative;
   display: none;
@@ -978,19 +995,27 @@ $desktop: 1440px;
   height: 514px;
   background-color: #96C22F;
 }
-.fonOfRoad_1{
+.fonOfRoad_1 {
   position: relative;
   display: none;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   width: 100%;
-  height: 100%;
   background-color: #96C22F;
-
 }
-#road_0{
+.fonOfRoad_2 {
+  position: relative;
   display: none;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  background-color: #96C22F;
+  background-image: url('../images/svg_4/river.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;  
 }
+
 .item{
   display: flex;
   flex-direction: column;
@@ -998,12 +1023,21 @@ $desktop: 1440px;
   align-items: center;
   width: 100%;
 }
+.item.road_2{
+transform: translateX(-5px);
+}
 #road_trees,
 #forest_2,
 #forest_1,
-#road_tree{
+#road_tree,
+#road_river_right,
+#road_river_left {
   display: none;
   width: 100%;
+}
+#road_trees,
+#road_tree {
+height: 363px;
 }
 .item.grass-fon{
 background-image: url('../images/svg_4/grass_fon.svg');

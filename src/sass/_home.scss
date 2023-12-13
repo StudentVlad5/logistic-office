@@ -701,15 +701,15 @@ $desktop: 1440px;
 
 #car_with_driver_ {
   position: absolute;
-  bottom: 0%;
+  bottom: -20%;
   left: 48.5%;
   opacity: 1;
   z-index: 22;
   width: 50px;
-  transform: scale(2);
+  transform: scale(-4.6, 4.6);
   display: none;
   @media screen and (min-width: $tablet) {
-    left: 45%;
+    left: 37%;
   }
 }
 #car_with_driver_start {
@@ -1069,30 +1069,36 @@ $desktop: 1440px;
 #board_white_left_side_1,
 #board_white_left_side_2,
 #board_white_left_side_3{
+  display: none;
   transform: translateX(320px) scale(0.75);
 }
 #board_white_right_side_1,
 #board_white_right_side_2,
 #board_white_right_side_3{
+  display: none;
   transform: translateX(-320px) scale(0.75);
 }
 #big_board_white_right_side {
+  display: none;
   position: absolute;
   left: 15%;
   top: 0;
   transform: scale(0.7);
 }
 #big_board_blue {
+  display: none;
   position: absolute;
   transform: scale(0.7);
   bottom: 10%;
 }
 #big_board_white_both_side {
+  display: none;
   position: absolute;
   transform: scale(0.75);
   bottom: 10%;
 }
 #big_board_white_with_trafficlight {
+  display: none;
   position: absolute;
   transform: scale(0.75);
   bottom: 10%;

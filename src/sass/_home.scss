@@ -1060,3 +1060,41 @@ $desktop: 1440px;
   width: 100%;
   position: relative;
 }
+
+.item.bigboards{
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+#board_white_left_side_1,
+#board_white_left_side_2,
+#board_white_left_side_3{
+  transform: translateX(320px) scale(0.75);
+}
+#board_white_right_side_1,
+#board_white_right_side_2,
+#board_white_right_side_3{
+  transform: translateX(-320px) scale(0.75);
+}
+#big_board_white_right_side {
+  position: absolute;
+  left: 15%;
+  top: 0;
+  transform: scale(0.7);
+}
+#big_board_blue {
+  position: absolute;
+  transform: scale(0.7);
+  bottom: 10%;
+}
+#big_board_white_both_side {
+  position: absolute;
+  transform: scale(0.75);
+  bottom: 10%;
+}
+#big_board_white_with_trafficlight {
+  position: absolute;
+  transform: scale(0.75);
+  bottom: 10%;
+}
+

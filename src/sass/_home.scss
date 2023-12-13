@@ -1002,6 +1002,11 @@ $desktop: 1440px;
   align-items: start;
   width: 100%;
   background-color: #96C22F;
+  background-image: url('../images/svg_4/fon_1.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;  
+
 }
 .fonOfRoad_2 {
   position: relative;
@@ -1010,9 +1015,45 @@ $desktop: 1440px;
   align-items: start;
   width: 100%;
   background-color: #96C22F;
-  background-image: url('../images/svg_4/river.svg');
+  background-image: url('../images/svg_4/fon_2.svg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100%;
+  background-position: center center;   
+}
+.fonOfRoad_3 {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #96C22F;
+  background-image: url('../images/svg_4/fon_3.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;     
+}
+.fonOfRoad_4 {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #96C22F;
+  background-image: url('../images/svg_4/fon_3_5.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center; 
+}
+.fonOfRoad_5 {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #96C22F;
+  background-image: url('../images/svg_4/fon_4.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
   background-position: center center;  
 }
 
@@ -1026,19 +1067,13 @@ $desktop: 1440px;
 .item.road_2{
 transform: translateX(-5px);
 }
-#road_trees,
-#forest_2,
-#forest_1,
-#road_tree,
 #road_river_right,
-#road_river_left {
+#road_river_left,
+#ocheret_1,
+#ocheret_2 {
   display: none;
   width: 100%;
+  position: relative;
 }
-#road_trees,
-#road_tree {
-height: 363px;
-}
-.item.grass-fon{
-background-image: url('../images/svg_4/grass_fon.svg');
-}
+
+

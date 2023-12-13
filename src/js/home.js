@@ -392,7 +392,6 @@ const turnLeft = document.getElementById("turnLeft");
 const scene1 = document.querySelector(".canvas");
 const scene2 = document.querySelector(".canvas-2");
 const car_turn_left = document.getElementById("car_turn_left");
-console.log(car_turn_left);
 const car = document.getElementById("car");
 
 function startScene2() {
@@ -427,16 +426,17 @@ function startScene2() {
     document.getElementById("fonOfRoad").style.display = "flex";
     document.getElementById("fonOfRoad_1").style.display = "flex";
     document.getElementById("fonOfRoad_2").style.display = "flex";
+    document.getElementById("fonOfRoad_3").style.display = "flex";
+    document.getElementById("fonOfRoad_4").style.display = "flex";
+    document.getElementById("fonOfRoad_5").style.display = "flex";
     document.getElementById("road_0").style.display = "block";
     document.getElementById("road_1").style.display = "block";
     document.getElementById("road_2").style.display = "block";
     document.getElementById("road_3").style.display = "block";
     document.getElementById("road_4").style.display = "block";
     document.getElementById("road_5").style.display = "block";
-    document.getElementById("road_trees").style.display = "block";
-    document.getElementById("road_tree").style.display = "block";
-    document.getElementById("forest_1").style.display = "block";
-    document.getElementById("forest_2").style.display = "block";
+    document.getElementById("ocheret_1").style.display = "block";
+    document.getElementById("ocheret_2").style.display = "block";
   }, 5000);
 }
 turnLeft.onClick = startScene2;

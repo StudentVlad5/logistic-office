@@ -1070,37 +1070,60 @@ $desktop: 1440px;
 #board_white_left_side_2,
 #board_white_left_side_3{
   display: none;
-  transform: translateX(320px) scale(0.75);
+  transform: translate(717px, 300px) scale(0.5);
+  @media screen and (min-width: $tablet) {
+    transform: translateX(320px) scale(0.75);
+  }
 }
 #board_white_right_side_1,
 #board_white_right_side_2,
 #board_white_right_side_3{
   display: none;
-  transform: translateX(-320px) scale(0.75);
+  transform: translateX(-717px) scale(0.5);
+  @media screen and (min-width: $tablet) {
+    transform: translateX(-320px) scale(0.75);
+  }
 }
 #big_board_white_right_side {
   display: none;
   position: absolute;
-  left: 15%;
+  left: 5%;
   top: 0;
-  transform: scale(0.7);
+  transform: scale(0.4);
+  @media screen and (min-width: $tablet) {
+    left: 15%;
+    top: 0;
+    transform: scale(0.7);
+  }
 }
 #big_board_blue {
   display: none;
   position: absolute;
-  transform: scale(0.7);
+  transform: scale(0.35);
   bottom: 10%;
+  @media screen and (min-width: $tablet) {
+    transform: scale(0.7);
+    bottom: 10%;
+  }
 }
 #big_board_white_both_side {
   display: none;
   position: absolute;
-  transform: scale(0.75);
+  transform: scale(0.35);
   bottom: 10%;
+  @media screen and (min-width: $tablet) {
+    transform: scale(0.75);
+    bottom: 10%;
+  }
 }
 #big_board_white_with_trafficlight {
   display: none;
   position: absolute;
-  transform: scale(0.75);
+  transform: scale(0.27);
   bottom: 10%;
+  @media screen and (min-width: $tablet) {
+    transform: scale(0.75);
+    bottom: 10%;
+  }
 }
 

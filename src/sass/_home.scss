@@ -723,7 +723,8 @@ $desktop: 1440px;
   transform: scale(2);
   display: none;
   @media screen and (min-width: $tablet) {
-    left: 50%;
+    left: 40%;
+    top: 40%;
   }
 }
 #car_with_dog_and_driver {
@@ -737,7 +738,8 @@ $desktop: 1440px;
   transform: scale(2);
   display: none;
   @media screen and (min-width: $tablet) {
-    left: 50%;
+    left: 40%;
+    top: 40%;
   }
 }
 #car_with_dog_and_plant_and_driver {
@@ -751,7 +753,8 @@ $desktop: 1440px;
   transform: scale(2);
   display: none;
   @media screen and (min-width: $tablet) {
-    left: 50%;
+    left: 40%;
+    top: 40%;
   }
 }
 #lady_with_package {
@@ -764,6 +767,10 @@ $desktop: 1440px;
   height: auto;
   transform: scale(1.5);
   display: none;
+  @media screen and (min-width: $tablet) {
+    left: 36%;
+    top: 50%;
+  }
 }
 #lady_without_package {
   position: absolute;
@@ -775,6 +782,10 @@ $desktop: 1440px;
   height: auto;
   transform: scale(-0.8, 0.8);
   display: none;
+  @media screen and (min-width: $tablet) {
+    left: 36%;
+    top: 46%;
+  }
 }
 #lady_without_package_back {
   position: absolute;
@@ -786,6 +797,10 @@ $desktop: 1440px;
   height: auto;
   transform: scale(0.8);
   display: none;
+  @media screen and (min-width: $tablet) {
+    left: 36%;
+    top: 46%;
+  }
 }
 #man_with_package {
   position: absolute;

@@ -435,9 +435,12 @@ function startScene2() {
     document.getElementById("road_5").style.display = "block";
     document.getElementById("ocheret_1").style.display = "block";
     document.getElementById("ocheret_2").style.display = "block";
-    document.getElementById("big_board_white_with_trafficlight").style.display = "block";
-    document.getElementById("big_board_white_both_side").style.display = "block";
-    document.getElementById("big_board_white_right_side").style.display = "block";
+    document.getElementById("big_board_white_with_trafficlight").style.display =
+      "block";
+    document.getElementById("big_board_white_both_side").style.display =
+      "block";
+    document.getElementById("big_board_white_right_side").style.display =
+      "block";
     document.getElementById("big_board_blue").style.display = "block";
     document.getElementById("board_white_left_side_1").style.display = "block";
     document.getElementById("board_white_left_side_2").style.display = "block";
@@ -459,51 +462,51 @@ canvas.from(
 canvas.to(
   "#car_with_driver_start",
   { opacity: 0, scale: 0, duration: 0.01 },
-  1.7
+  2
 );
 canvas.from(
   "#car_with_dog_and_driver",
   { opacity: 0, duration: 0.01, scale: 0 },
-  1.7
+  2
 );
 canvas.to(
   "#car_with_dog_and_driver",
   { opacity: 0, duration: 0.01, scale: 0 },
-  1.9
+  2.2
 );
 canvas.from(
   "#car_with_dog_and_plant_and_driver",
   { opacity: 0, duration: 0.01 },
-  1.9
+  2.2
 );
 
-canvas.from("#lady_with_package", { opacity: 0, x: -250 }, 1, 0.5);
-canvas.to("#lady_with_package", { opacity: 0, duration: 0.01 }, 1.7);
-canvas.from("#lady_without_package", { opacity: 0, duration: 0.01 }, 1.7);
-canvas.from("#man_with_package", { opacity: 0, x: 250 }, 1, 0.5);
-canvas.to("#man_with_package", { opacity: 0, duration: 0.01 }, 1.9);
-canvas.from("#man_without_package", { opacity: 0, duration: 0.01 }, 1.9);
-canvas.to("#man_without_package", { opacity: 0, duration: 0.01 }, 2);
-canvas.to("#lady_without_package", { opacity: 0, duration: 0.01 }, 2);
+canvas.from("#lady_with_package", { opacity: 0, x: -250 }, 1, 0.7);
+canvas.to("#lady_with_package", { opacity: 0, duration: 0.01 }, 2);
+canvas.from("#lady_without_package", { opacity: 0, duration: 0.01 }, 2);
+canvas.from("#man_with_package", { opacity: 0, x: 250 }, 1, 0.7);
+canvas.to("#man_with_package", { opacity: 0, duration: 0.01 }, 2.2);
+canvas.from("#man_without_package", { opacity: 0, duration: 0.01 }, 2.2);
+canvas.to("#man_without_package", { opacity: 0, duration: 0.01 }, 2.3);
+canvas.to("#lady_without_package", { opacity: 0, duration: 0.01 }, 2.3);
 
-canvas.from("#lady_without_package_back", { opacity: 0, duration: 0.01 }, 2);
-canvas.from("#man_without_package_back", { opacity: 0, duration: 0.01 }, 2);
+canvas.from("#lady_without_package_back", { opacity: 0, duration: 0.01 }, 2.3);
+canvas.from("#man_without_package_back", { opacity: 0, duration: 0.01 }, 2.3);
 canvas.to(
   "#lady_without_package_back",
   { x: -200, opacity: 0, duration: 1 },
-  2.0
+  2.3
 );
 canvas.to(
   "#man_without_package_back",
   { x: 200, opacity: 0, duration: 1 },
-  2.0
+  2.3
 );
 canvas.to(
   "#car_with_dog_and_plant_and_driver",
   { y: 4 * speed, duration: 1.5 },
-  2.0
+  2.3
 );
 
 canvas.to("#canvas-2_2", { opacity: 1, y: 0, duration: 1.2 }, 0.5);
-canvas.from("#canvas-2_3", { opacity: 0, top: "100%" }, 2.5);
-canvas.from("#movie_road", { opacity: 1, y: -0.5 * speed }, 2.6);
+canvas.from("#canvas-2_3", { opacity: 0, top: "100%" }, 2.7);
+canvas.from("#movie_road", { opacity: 1, y: -0.5 * speed }, 2.8);

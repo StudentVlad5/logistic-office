@@ -17,7 +17,6 @@ ScrollTrigger.create({
   scrub: 2.7,
 });
 
-// canvas.to("#sun", { x: 9 * speed, y: 1 * speed, delay: 0.03, duration: 2 }, 0);
 canvas.to("#cloud-1", { x: 10 * speed, scale: 0.5, duration: 2 }, 0);
 canvas.to("#cloud-2", { x: 10 * speed, scale: 0.5, duration: 2 }, 0);
 if (widthWindow >= 800) {
@@ -35,17 +34,6 @@ if (widthWindow >= 800) {
 }
 canvas.to("#hills", { scale: 1.095, duration: 1.5 }, 0);
 canvas.from("#hills", { scale: 1.095, duration: 1.5 }, 1.5);
-
-// canvas.to("#hills-1", { x: 1 * speed, y: -0.009 * speed, duration: 2 }, 0);
-// canvas.to(
-//   "#hills-2",
-//   {
-//     x: -1 * speed,
-//     y: -0.009 * speed,
-//     duration: 2,
-//   },
-//   0
-// );
 canvas.to(
   "#build-3",
   {
@@ -390,23 +378,37 @@ gsap.to("#car", {
 // 2 PATH
 const turnLeft = document.getElementById("turnLeft");
 const scene1 = document.querySelector(".canvas");
-const scene2 = document.querySelector(".canvas-2");
+const scene2 = document.querySelector(".canvas-1");
+const scene3 = document.querySelector(".canvas-2");
 const car_turn_left = document.getElementById("car_turn_left");
+const car_turn_left_move = document.getElementById("car_turn_left_move");
 const car = document.getElementById("car");
 
 function startScene2() {
   scene2.classList.add("active");
+  scene1.classList.add("active");
+  scene3.classList.add("active");
+  car_turn_left_move.style.display = "block";
   car_turn_left.style.display = "block";
   car.style.display = "none";
   setTimeout(() => {
     car_turn_left.classList.add("active");
+    car_turn_left_move.classList.add("active");
   }, 100);
+
+  setTimeout(() => {
+    scene1.style.display = "none";
+    document
+      .getElementById("car_with_driver_leftAnimation")
+      .classList.add("active");
+  }, 1500);
 
   setTimeout(() => {
     scene1.style.display = "none";
     window.scrollTo(0, 0);
   }, 3000);
   setTimeout(() => {
+    scene2.style.position = "relative";
     document.getElementById("car_with_driver_start").style.display = "block";
     document.getElementById("lady_with_package").style.display = "block";
     document.getElementById("lady_without_package").style.display = "block";
@@ -419,6 +421,7 @@ function startScene2() {
     document.getElementById("car_with_dog_and_plant_and_driver").style.display =
       "block";
     document.getElementById("car_with_driver_").style.display = "block";
+    document.getElementById("canvas-2_2").style.display = "flex";
     document.getElementById("canvas-2_3").style.display = "flex";
     document.getElementById("movie_road").style.display = "block";
     document.getElementById("fonOfRoad").style.display = "flex";
@@ -449,7 +452,12 @@ function startScene2() {
     document.getElementById("board_white_right_side_2").style.display = "block";
     document.getElementById("board_white_right_side_3").style.display = "block";
   }, 5000);
+
+  // setTimeout(() => {
+  //   document.getElementById("lastScene").style.display = "block";
+  // }, 6000);
 }
+
 turnLeft.onClick = startScene2;
 turnLeft.addEventListener("click", startScene2);
 
@@ -507,6 +515,8 @@ canvas.to(
   2.3
 );
 
-canvas.to("#canvas-2_2", { opacity: 1, y: 0, duration: 1.2 }, 0.5);
+canvas.to("#canvas-2", { top: 0, duration: 1.2, easing: "linear" }, 0.2);
+// canvas.to("#canvas-2_2", { opacity: 1, y: 0, duration: 1.2 }, 0.5);
+// canvas.to("#canvas-1", { opacity: 1, y: -1.5 * speed }, 3.5);
 canvas.from("#canvas-2_3", { opacity: 0, top: "100%" }, 2.7);
 canvas.from("#movie_road", { opacity: 1, y: -0.5 * speed }, 2.8);

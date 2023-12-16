@@ -1083,15 +1083,22 @@ $desktop: 1440px;
 }
 #light_box {
   position: absolute;
-  bottom: 0%;
-  left: 20%;
+  left: 15%;
+  bottom: 7%;
   opacity: 1;
   z-index: 11;
   height: auto;
-  transform: scale(0.45);
-  // display: none;
+  transform: scale(0.4);
+  display: none;
   @media screen and (min-width: $tablet) {
-    // right: 33%;
+    bottom: -5%;
+    left: 10%;
+    transform: scale(0.5);
+  }
+  @media screen and (min-width: $desktop) {
+    bottom: -12%;
+    left: 1%;
+    transform: scale(0.5);
   }
 }
 
@@ -1102,7 +1109,13 @@ $desktop: 1440px;
 #road_4,
 #road_5 {
   display: none;
-  // width: 100%;
+
+}
+.item.road_1 {
+  width: 2825px;
+}
+.item.road_2 {
+  width: 4025px;
 }
 
 .movie_road {

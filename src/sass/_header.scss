@@ -80,7 +80,7 @@
     width: 100vw;
     height: 100vh;
 
-    padding: 55px 100px 0 100px;
+    padding: 25px 100px 0 100px;
 
     display: flex;
     flex-direction: column;
@@ -97,6 +97,9 @@
     background-position: center;
     overflow-y: scroll;
 
+    @media screen and (min-width: $tablet) {
+        padding: 35px 100px 0 100px;
+    }
     @media screen and (min-width: $desktop) {
         display: none;
     }
@@ -121,7 +124,7 @@
             & .navigation__link {
                 color: var(--color-black);
                 font-size: 25px;
-
+                text-align: center;
                 &--active {
                     color: var(--color-accent);
                 }

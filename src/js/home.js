@@ -394,6 +394,7 @@ function startScene2() {
   setTimeout(() => {
     car_turn_left.classList.add("active");
     car_turn_left_move.classList.add("active");
+    document.getElementById("light_box").style.display = "block";
   }, 100);
 
   setTimeout(() => {

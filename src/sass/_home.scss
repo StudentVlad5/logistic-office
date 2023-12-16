@@ -47,6 +47,7 @@ $desktop: 1440px;
     opacity: 0;
   }
 }
+
 @keyframes turnLeft_animation {
   10% {
       opacity: 1;
@@ -60,6 +61,33 @@ $desktop: 1440px;
     transform: scale(-.2, 0.2);
     right: 50%;
     top: 70%;
+  }
+}
+
+@keyframes turnForward_animation {
+  10% {
+      opacity: 0.2;
+      transform: scale(-.2, 0.2);
+      bottom: 21%;
+      left: 26%;
+  }
+  30% {
+    opacity: 0.5;
+    transform: scale(-.9, .9);
+    bottom: 17.5%;
+    left: 24.75%;
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(-1.0, 1.0);
+    bottom: 15%;
+    left: 24.5%;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(-2.2, 2.2);
+    bottom: 10%;
+    left: 23%;
   }
 }
 
@@ -757,17 +785,23 @@ $desktop: 1440px;
 
 #car_with_driver_ {
   position: absolute;
-  bottom: -20%;
-  left: 48.5%;
+  bottom: 22%;
+  left: 27%;
   opacity: 1;
   z-index: 22;
   width: 50px;
-  transform: scale(-4.6, 4.6);
+  transform: scale(-.2, 0.2);
+  // transform: scale(-4.6, 4.6);
   display: none;
   @media screen and (min-width: $tablet) {
-    left: 37%;
+    // left: 37%;
   }
 }
+
+#car_with_driver_.active {
+  animation: turnForward_animation 3s cubic-bezier(0, 0, 1, 1) forwards;
+}
+
 #car_with_driver_leftAnimation {
   position: absolute;
   bottom: 20%;
@@ -1146,6 +1180,7 @@ $desktop: 1440px;
 }
 
 .item {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1165,15 +1200,19 @@ $desktop: 1440px;
 }
 
 .item.bigboards {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  position: relative;
 }
 #board_white_left_side_1,
 #board_white_left_side_2,
 #board_white_left_side_3 {
+  position: relative;
   display: none;
   transform: translate(717px, 300px) scale(0.5);
+  z-index: 99;
   @media screen and (min-width: $tablet) {
     transform: translateX(320px) scale(0.75);
   }
@@ -1181,15 +1220,19 @@ $desktop: 1440px;
 #board_white_right_side_1,
 #board_white_right_side_2,
 #board_white_right_side_3 {
+  position: relative;
   display: none;
-  transform: translateX(-717px) scale(0.5);
+  transform: translateX(-717px) scale(0.5); 
+  z-index: 99;
   @media screen and (min-width: $tablet) {
     transform: translateX(-320px) scale(0.75);
   }
 }
 #big_board_white_right_side {
+  position: relative;
   display: none;
   position: absolute;
+  z-index: 99;
   left: 5%;
   top: 0;
   transform: scale(0.4);
@@ -1202,6 +1245,7 @@ $desktop: 1440px;
 #big_board_blue {
   display: none;
   position: absolute;
+  z-index: 99;
   transform: scale(0.35);
   bottom: 10%;
   @media screen and (min-width: $tablet) {
@@ -1212,6 +1256,7 @@ $desktop: 1440px;
 #big_board_white_both_side {
   display: none;
   position: absolute;
+  z-index: 99;
   transform: scale(0.35);
   bottom: 10%;
   @media screen and (min-width: $tablet) {
@@ -1222,6 +1267,7 @@ $desktop: 1440px;
 #big_board_white_with_trafficlight {
   display: none;
   position: absolute;
+  z-index: 99;
   transform: scale(0.27);
   bottom: 10%;
   @media screen and (min-width: $tablet) {

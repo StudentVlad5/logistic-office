@@ -1,3 +1,5 @@
 import './js/home';
-import './js/mobile-menu';
 // import './js/codepen';
+import './js/bigboards';
+import './js/switcher';
+import './js/mobile-menu';

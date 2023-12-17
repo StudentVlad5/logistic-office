@@ -520,6 +520,7 @@ $desktop: 1440px;
   height: 8000px;
   width: 100px;
   top: 0;
+  left: 0;
   z-index: 0;
 }
 
@@ -1261,6 +1262,7 @@ $desktop: 1440px;
   z-index: 99;
   transform: scale(0.35);
   bottom: 10%;
+  left: -6.5%;
   @media screen and (min-width: $tablet) {
     transform: scale(0.7);
     bottom: 10%;

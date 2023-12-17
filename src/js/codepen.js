@@ -214,7 +214,7 @@ gsap.to('#fstar', {
   scrollTrigger: {
     trigger: '.scrollElement',
     start: '4000 top',
-    end: '6000 100%',
+    end: '8000 100%',
     scrub: 5,
     onEnter: function () {
       gsap.set('#fstar', { opacity: 1 });

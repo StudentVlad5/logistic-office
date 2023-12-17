@@ -1,6 +1,39 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+$mobile: 375px;
+$tablet: 768px;
+$desktop: 1440px;
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
 }

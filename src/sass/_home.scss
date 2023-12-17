@@ -1125,12 +1125,13 @@ $desktop: 1440px;
 }
 #light_box-logo-img{
   width: 150px;
-  height: 63px;
+  height: 52px;
 }
 .light_box-logo{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 10px;
 }
 .light_box-message{
   display: flex;

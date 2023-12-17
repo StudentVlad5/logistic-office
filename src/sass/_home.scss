@@ -1175,7 +1175,7 @@ $desktop: 1440px;
 .light_box-buttonContainer {
 display: flex;
 justify-content: row;
-gap:3px;
+gap:10px;
 justify-content: center;
 align-items: center;
 }
@@ -1185,7 +1185,6 @@ align-items: center;
   height: 70px;
   justify-content: center;
   align-items: center;
-  gap: 5px;
   border-radius: 15px;
   background: #0A93FD;
   color: #FFF;
@@ -1197,9 +1196,13 @@ align-items: center;
   text-transform: uppercase;
   cursor: pointer;
   @media screen and (min-width: $tablet) {
-    width: 90px;
-    height: 89px;
+    width: 80px;
+    height: 80px;
     font-size: 15px;
+  }
+  &:hover{
+    background: #FFF;
+    color: #0A93FD;
   }
 }
 .logo_client_and_driver{

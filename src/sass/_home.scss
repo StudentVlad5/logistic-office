@@ -36,8 +36,8 @@ $desktop: 1440px;
 
 @keyframes turnLeft {
   10% {
-      opacity: 1;
-      left: 15%;
+    opacity: 1;
+    left: 15%;
   }
   90% {
     opacity: 1;
@@ -50,15 +50,15 @@ $desktop: 1440px;
 
 @keyframes turnLeft_animation {
   10% {
-      opacity: 1;
-      right: 25%;
+    opacity: 1;
+    right: 25%;
   }
   90% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: scale(-.2, 0.2);
+    transform: scale(-0.2, 0.2);
     right: 50%;
     top: 70%;
   }
@@ -66,20 +66,20 @@ $desktop: 1440px;
 
 @keyframes turnForward_animation {
   10% {
-      opacity: 0.2;
-      transform: scale(-.2, 0.2);
-      bottom: 21%;
-      left: 26%;
+    opacity: 0.2;
+    transform: scale(-0.2, 0.2);
+    bottom: 21%;
+    left: 26%;
   }
   30% {
     opacity: 0.5;
-    transform: scale(-.9, .9);
+    transform: scale(-0.9, 0.9);
     bottom: 17.5%;
     left: 24.75%;
   }
   50% {
     opacity: 0.6;
-    transform: scale(-1.0, 1.0);
+    transform: scale(-1, 1);
     bottom: 15%;
     left: 24.5%;
   }
@@ -91,8 +91,7 @@ $desktop: 1440px;
   }
 }
 
-
-.viewContainer{
+.viewContainer {
   position: fixed;
   width: 1440px;
   height: 760px;
@@ -125,7 +124,6 @@ $desktop: 1440px;
   // transition-duration: 5ms;
   transition-duration: 5s;
 }
-
 
 #car {
   position: absolute;
@@ -176,7 +174,7 @@ $desktop: 1440px;
   transition: all 1s cubic-bezier(0, 0, 1, 1);
 }
 
-#car_turn_left_move { 
+#car_turn_left_move {
   position: absolute;
   top: 63%;
   left: 45%;
@@ -200,7 +198,7 @@ $desktop: 1440px;
 }
 
 #car_turn_left_move.active {
-  animation: .4s cubic-bezier(0, 0, 1, 1) 0.8s turnLeft;
+  animation: 0.4s cubic-bezier(0, 0, 1, 1) 0.8s turnLeft;
 }
 
 #cloud {
@@ -715,7 +713,7 @@ $desktop: 1440px;
   transition-duration: 5s;
 }
 .canvas-2 {
-  position: absolute;  
+  position: absolute;
   top: 100%;
   opacity: 1;
   // top: 0;
@@ -729,7 +727,6 @@ $desktop: 1440px;
   opacity: 1;
   display: block;
   // position: fixed;
-
 }
 
 .canvas-2_1 {
@@ -791,7 +788,7 @@ $desktop: 1440px;
   opacity: 1;
   z-index: 22;
   width: 50px;
-  transform: scale(-.2, 0.2);
+  transform: scale(-0.2, 0.2);
   // transform: scale(-4.6, 4.6);
   display: none;
   @media screen and (min-width: $tablet) {
@@ -816,7 +813,7 @@ $desktop: 1440px;
     right: 0%;
   }
 }
-#car_with_driver_leftAnimation.active{
+#car_with_driver_leftAnimation.active {
   animation: turnLeft_animation 3s cubic-bezier(0, 0, 1, 1) forwards;
 }
 #car_with_driver_start {
@@ -1110,7 +1107,7 @@ $desktop: 1440px;
     left: 1%;
   }
 }
-.light_box-container{
+.light_box-container {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -1123,17 +1120,17 @@ $desktop: 1440px;
     gap: 10px;
   }
 }
-#light_box-logo-img{
+#light_box-logo-img {
   width: 150px;
   height: 52px;
 }
-.light_box-logo{
+.light_box-logo {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 10px;
 }
-.light_box-message{
+.light_box-message {
   display: flex;
   padding: 10px;
   justify-content: center;
@@ -1142,14 +1139,14 @@ $desktop: 1440px;
   margin: 0 20px;
   flex-shrink: 0;
   border-radius: 7px;
-  border: 1.028px solid #0A93FD;
-  background: #FFF;
+  border: 1.028px solid #0a93fd;
+  background: #fff;
   @media screen and (min-width: $tablet) {
     margin: 0;
   }
 }
-.light_box-message > p{
-  color: #0A93FD;
+.light_box-message > p {
+  color: #0a93fd;
   text-align: center;
   font-family: Oswald;
   font-size: 12px;
@@ -1160,9 +1157,9 @@ $desktop: 1440px;
     font-size: 16px;
   }
 }
-.light_box-choiceMassage{
+.light_box-choiceMassage {
   display: flex;
-  color: #0A93FD;
+  color: #0a93fd;
   text-align: center;
   font-family: Inter;
   font-size: 18px;
@@ -1174,21 +1171,21 @@ $desktop: 1440px;
   }
 }
 .light_box-buttonContainer {
-display: flex;
-justify-content: row;
-gap:10px;
-justify-content: center;
-align-items: center;
+  display: flex;
+  justify-content: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
-.light_box-btn{
+.light_box-btn {
   display: flex;
   width: 70px;
   height: 70px;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
-  background: #0A93FD;
-  color: #FFF;
+  background: #0a93fd;
+  color: #fff;
   font-family: Inter;
   font-size: 12px;
   font-style: normal;
@@ -1201,12 +1198,12 @@ align-items: center;
     height: 80px;
     font-size: 15px;
   }
-  &:hover{
-    background: #FFF;
-    color: #0A93FD;
+  &:hover {
+    background: #fff;
+    color: #0a93fd;
   }
 }
-.logo_client_and_driver{
+.logo_client_and_driver {
   transform: scale(1.2);
 }
 
@@ -1217,7 +1214,6 @@ align-items: center;
 #road_4,
 #road_5 {
   display: none;
-
 }
 .item.road {
   width: 100%;
@@ -1344,7 +1340,7 @@ align-items: center;
 #board_white_right_side_3 {
   position: relative;
   display: none;
-  transform: translateX(-717px) scale(0.5); 
+  transform: translateX(-717px) scale(0.5);
   z-index: 99;
   @media screen and (min-width: $tablet) {
     transform: translateX(-320px) scale(0.75);
@@ -1355,13 +1351,15 @@ align-items: center;
   display: none;
   position: absolute;
   z-index: 99;
-  left: 5%;
+  left: -12%;
   top: 0;
+  width: 129%;
   transform: scale(0.4);
   @media screen and (min-width: $tablet) {
-    left: 15%;
+    left: -31%;
     top: 0;
     transform: scale(0.7);
+    width: 179.5%;
   }
 }
 #big_board_blue {
@@ -1370,10 +1368,11 @@ align-items: center;
   z-index: 99;
   transform: scale(0.35);
   bottom: 10%;
-  left: -6.5%;
+  left: -66.5%;
   @media screen and (min-width: $tablet) {
     transform: scale(0.7);
     bottom: 10%;
+    width: 1663px;
   }
 }
 #big_board_white_both_side {
@@ -1393,8 +1392,10 @@ align-items: center;
   z-index: 99;
   transform: scale(0.27);
   bottom: 10%;
+  width: 285%;
   @media screen and (min-width: $tablet) {
     transform: scale(0.75);
     bottom: 10%;
+    width: 222%;
   }
 }

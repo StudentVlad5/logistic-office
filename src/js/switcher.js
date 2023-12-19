@@ -25,6 +25,8 @@ const count = document.querySelector('.count_box-num-text');
 const total = document.querySelector('.count_box-num-text1');
 const btnBack = document.querySelector('.btn-back');
 const btnNext = document.querySelector('.btn-next');
+const client = document.querySelector('.client');
+const driver = document.querySelector('.driver');
 
 let currentIndex = 0;
 
@@ -153,7 +155,7 @@ const lastDiscrArr2 = [
 
 const lastWord1 = document.querySelectorAll('.last-word1');
 const lastWord2 = document.querySelectorAll('.last-word2');
-const lastSwitcher = document.querySelectorAll('.last-switcher');
+const lastSwitcher = document.querySelectorAll('.last_bord-switcher');
 const lastSwitchText = document.getElementById('last-switch-title');
 const lastSwitchDiscr = document.getElementById('last-switch-discr');
 const lastCount = document.querySelector('.num_box-num-text');
@@ -164,7 +166,7 @@ let lastCurrentIndex = 0;
 
 lastWord1.forEach(el => {
   el.addEventListener('click', function () {
-    lastSwitcher.forEach(it => (it.checked = false));
+    lastSwitcher.forEach(it => (it.checked = true));
     el.classList.add('label--isActive2');
     lastWord2.forEach(otherEl => otherEl.classList.remove('label--isActive2'));
 
@@ -177,7 +179,7 @@ lastWord1.forEach(el => {
 
 lastWord2.forEach(el => {
   el.addEventListener('click', function () {
-    lastSwitcher.forEach(it => (it.checked = true));
+    lastSwitcher.forEach(it => (it.checked = false));
     el.classList.add('label--isActive2');
     lastWord1.forEach(otherEl => otherEl.classList.remove('label--isActive2'));
 
@@ -193,14 +195,18 @@ lastSwitcher.forEach(el => {
   el.addEventListener('click', function () {
     if (el.checked == true) {
       lastWord2.forEach(otherEl => otherEl.classList.add('label--isActive2'));
-      lastWord1.forEach(otherEl => otherEl.classList.remove('label--isActive2'));
+      lastWord1.forEach(otherEl =>
+        otherEl.classList.remove('label--isActive2')
+      );
 
       lastCurrentIndex = 0;
       lastSwitchText.textContent = lastTitleArr1[lastCurrentIndex];
       lastSwitchDiscr.textContent = lastDiscrArr1[lastCurrentIndex];
       lastCount.textContent = `0${lastCurrentIndex + 1}`;
     } else {
-      lastWord2.forEach(otherEl => otherEl.classList.remove('label--isActive2'));
+      lastWord2.forEach(otherEl =>
+        otherEl.classList.remove('label--isActive2')
+      );
       lastWord1.forEach(otherEl => otherEl.classList.add('label--isActive2'));
 
       lastCurrentIndex = 0;
@@ -228,9 +234,7 @@ function changeLastText(step) {
       : lastTitleArr2.length - 1;
   } else if (
     lastCurrentIndex >=
-    (lastSwitcher[0].checked
-      ? lastTitleArr2.length
-      : lastTitleArr1.length)
+    (lastSwitcher[0].checked ? lastTitleArr2.length : lastTitleArr1.length)
   ) {
     lastCurrentIndex = 0;
   }
@@ -257,4 +261,60 @@ lastBtnBack.addEventListener('click', function () {
 
 lastBtnNext.addEventListener('click', function () {
   changeLastText(1);
+});
+
+// client or driver
+
+client.addEventListener('click', function () {
+  switcher.forEach(it => (it.checked = false));
+  lastSwitcher.forEach(it => (it.checked = false));
+
+  client.classList.add('active-light_box-btn');
+  driver.classList.remove('active-light_box-btn');
+
+  word1.forEach(otherEl => otherEl.classList.add('label--isActive'));
+  word2.forEach(otherEl => otherEl.classList.remove('label--isActive'));
+
+  lastWord1.forEach(otherEl => otherEl.classList.add('label--isActive2'));
+  lastWord2.forEach(otherEl => otherEl.classList.remove('label--isActive2'));
+
+  console.log('вибраний клієнт');
+
+  currentIndex = 0;
+  lastCurrentIndex = 0;
+
+  switchText.textContent = textsArr1[currentIndex];
+  count.textContent = `0${currentIndex + 1}`;
+  total.textContent = `0${textsArr1.length}`;
+
+  lastSwitchText.textContent = lastTitleArr1[lastCurrentIndex];
+  lastSwitchDiscr.textContent = lastDiscrArr1[lastCurrentIndex];
+  lastCount.textContent = `0${lastCurrentIndex + 1}`;
+});
+
+driver.addEventListener('click', function () {
+  switcher.forEach(it => (it.checked = true));
+  lastSwitcher.forEach(it => (it.checked = true));
+
+  client.classList.remove('active-light_box-btn');
+  driver.classList.add('active-light_box-btn');
+
+  word1.forEach(otherEl => otherEl.classList.remove('label--isActive'));
+  word2.forEach(otherEl => otherEl.classList.add('label--isActive'));
+
+  lastWord1.forEach(otherEl => otherEl.classList.remove('label--isActive2'));
+  lastWord2.forEach(otherEl => otherEl.classList.add('label--isActive2'));
+
+  console.log('вибраний водій');
+
+  currentIndex = 0;
+  lastCurrentIndex = 0;
+
+  switchText.textContent = textsArr2[currentIndex];
+  count.textContent = `0${currentIndex + 1}`;
+  total.textContent = `0${textsArr2.length}`;
+
+  lastSwitchText.textContent = lastTitleArr2[lastCurrentIndex];
+  lastSwitchDiscr.textContent = lastDiscrArr2[lastCurrentIndex];
+  lastCount.textContent = `0${lastCurrentIndex + 1}`;
 });

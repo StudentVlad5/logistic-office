@@ -1198,11 +1198,17 @@ $desktop: 1440px;
     height: 80px;
     font-size: 15px;
   }
-  &:hover {
+  &:hover,
+  &:focus {
     background: #fff;
     color: #0a93fd;
   }
 }
+.active-light_box-btn {
+  background: #fff;
+  color: #0a93fd;
+}
+
 .logo_client_and_driver {
   transform: scale(1.2);
 }

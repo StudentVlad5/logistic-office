@@ -773,9 +773,12 @@ $desktop: 1440px;
   // transform: translateY(100%);
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  // scrollbar-width: none; /* Firefox */
   background: rgb(136, 204, 223);
   background-position: center;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 .canvas-2_3::-webkit-scrollbar {
   display: none;
@@ -1330,14 +1333,18 @@ $desktop: 1440px;
   gap: 10px;
   position: relative;
 }
+
 #board_white_left_side_1,
 #board_white_left_side_2,
 #board_white_left_side_3 {
   position: relative;
   display: none;
-  transform: translate(717px, 300px) scale(0.5);
+  transform: translate(717px, 216px) scale(0.5);
   z-index: 99;
   @media screen and (min-width: $tablet) {
+    transform: translateX(517px) scale(0.55);
+  }
+  @media screen and (min-width: $desktop) {
     transform: translateX(320px) scale(0.75);
   }
 }
@@ -1346,9 +1353,12 @@ $desktop: 1440px;
 #board_white_right_side_3 {
   position: relative;
   display: none;
-  transform: translateX(-717px) scale(0.5);
+  transform: translateX(-723px) scale(0.5);
   z-index: 99;
   @media screen and (min-width: $tablet) {
+    transform: translateX(-517px) scale(0.55);
+  }
+  @media screen and (min-width: $desktop) {
     transform: translateX(-320px) scale(0.75);
   }
 }

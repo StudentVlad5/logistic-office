@@ -8,6 +8,10 @@
     z-index: 999;
 
     @media screen and(min-width:$tablet) {
+      top: 31%;
+      left: 99%;
+    }
+    @media screen and(min-width:$desktop) {
       top: 14%;
       left: 60%;
     }
@@ -20,6 +24,10 @@
     z-index: 999;
 
     @media screen and(min-width:$tablet) {
+      top: 31%;
+      left: -45%;
+    }
+    @media screen and(min-width:$desktop) {
       top: 14%;
       left: -27%;
     }
@@ -27,18 +35,21 @@
 
   &_for_text {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+    align-items: start;
     margin-top: 6px;
     margin-bottom: 3px;
 
-    // @media screen and (min-width: $tablet) {
-    //   margin-top: 12px;
-    //   margin-bottom: 5px;
-    // }
-
     @media screen and (min-width: $tablet) {
+      margin-top: 6px;
+      margin-bottom: 3px;
+    }
+
+    @media screen and (min-width: $desktop) {
       margin-top: 23px;
       margin-bottom: 15px;
+      gap: 15px;
     }
   }
 
@@ -50,21 +61,23 @@
     font-weight: 500;
     line-height: 120%;
     text-transform: uppercase;
-    width: 593px;
-
-    // @media screen and (min-width: $tablet) {
-    //   font-size: 25px;
-    // }
+    // width: 593px;
 
     @media screen and (min-width: $tablet) {
+      font-size: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
       font-size: 45px;
     }
   }
 
   &_number {
     display: flex;
+    padding: 10px 15px;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    text-align: start;
     color: #0a93fd;
     font-family: 'Oswald', sans-serif;
     font-style: normal;
@@ -72,23 +85,12 @@
     line-height: 120%;
 
     font-size: 23px;
-    width: 30px;
-    height: 30px;
     border-radius: 10px;
     border: 1px solid #0a93fd;
 
-    // @media screen and (min-width: $tablet) {
-    //   font-size: 12px;
-    //   width: 19px;
-    //   height: 19px;
-    //   border-radius: 7px;
-    //   border: 0.475px solid #0a93fd;
-    // }
-
     @media screen and (min-width: $tablet) {
       font-size: 25px;
-      width: 40px;
-      height: 40px;
+      padding: 15px 20px;
       border-radius: 15px;
       border: 1px solid #0a93fd;
     }
@@ -97,45 +99,36 @@
   &_subtitle {
     color: #0a93fd;
     font-family: 'Inter', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
-    margin-left: 3px;
-    width: 300px;
-
-    // @media screen and (min-width: $tablet) {
-    //   font-size: 20px;
-    //   margin-left: 5px;
-    // }
+    word-wrap: break-word;
 
     @media screen and (min-width: $tablet) {
-      //   font-size: 45px;
+      width: 100%;
+       font-size: 20px;
+    }
+
+    @media screen and (min-width: $desktop) {
       width: 100%;
       font-size: 40px;
-      margin-left: 15px;
-
-      &:last-child {
-        width: 450px;
-      }
+      font-size: 25px;
     }
   }
 
   &_discr {
     color: #1d1d1d;
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
-    position: absolute;
-    left: 33px;
-    width: 300px;
-    // @media screen and (min-width: $tablet) {
-    //   font-size: 10px;
-    // }
-
     @media screen and (min-width: $tablet) {
+      font-size: 18px;
+    }
+
+    @media screen and (min-width: $desktop) {
       font-size: 25px;
       width: 435px;
       left: 57px;
@@ -144,6 +137,10 @@
 }
 
 .bigboard_box {
+  &_container_right{
+  width: 350px;
+  }
+
   &_container {
     position: absolute;
     top: 11%;
@@ -176,7 +173,16 @@
     }
   }
 }
-
+.bigboards_box_container,
+.bigboards_box_container_right{
+  width: 330px;
+  @media screen and (min-width: $tablet) {
+  width: 350px;
+  }
+  @media screen and (min-width: $desktop) {
+  width: 100%;
+  }
+}
 .bigboard_list {
   display: flex;
   align-items: center;

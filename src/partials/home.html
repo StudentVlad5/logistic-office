@@ -346,14 +346,19 @@
           <div class="fonOfRoad_4" id="fonOfRoad_4">
             <div class="item road_4">
               <img id="road_4" src="images/svg_4/road_4.svg" alt="road parth 4" />
-              <img id="big_board_white_both_side" src="images/svg_4/big_white_big_board_4.svg" alt="big board white" />
+              <picture>
+                <source media="(max-width: 1440px)" srcset="images/bigboard_svg/mobile_svg/big_board_white_both_side.svg">
+                <source media="(min-width: 1440px)" srcset="images/svg_4/big_white_big_board_4.svg">
+                <img id="big_board_white_both_side" src="images/svg_4/big_white_big_board_4.svg" alt="big board white">
+              </picture> 
             </div>
 
             <div class="bigboard_white-box bigboard_white">
-              <h2 class="bigboard_white-title">Порівняння <img src="images/logoBlue.svg" alt=""
-                  class="bigboard_white-img">
-                з
-                іншими службами</h2>
+              <div class="bigboard_white-title--wrap">
+              <h2 class="bigboard_white-title">Порівняння</h2>
+              <img src="images/logoBlue.svg" alt="logo" class="bigboard_white-img">
+              <h2 class="bigboard_white-title">з іншими службами</h2>
+              </div>
 
               <ul class="bigboard_white-list">
                 <li class=" bigboard_white_list_item">
@@ -390,9 +395,12 @@
 
               <div class="text_box">
                 <div class="text_box-container1">
-                  <h3 class="text_box-title">Cлужба доставки <img src="images/logoBlue.svg" class="text_box-title-img"
-                      alt="">
-                  </h3>
+                  <div class="text_box-container1--wrap">
+                    <h3 class="text_box-title">Cлужба доставки</h3> 
+                    <img src="images/logoBlue.svg" class="text_box-title-img"
+                    alt="logo">
+                  </div>
+                  
 
                   <p class="text_box-discr">
                     <img class="text_box-img" src="images/checkmark.svg" alt="">

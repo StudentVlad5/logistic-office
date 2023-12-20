@@ -1367,14 +1367,20 @@ $desktop: 1440px;
   display: none;
   position: absolute;
   z-index: 99;
-  left: -12%;
+  left: -15%;
   top: 0;
   width: 129%;
-  transform: scale(0.4);
+  transform: scale(0.45);
   @media screen and (min-width: $tablet) {
-    left: -31%;
+    left: -40%;
+    transform: scale(.65);
     top: 0;
-    transform: scale(0.7);
+    width: 179.5%;
+  }
+  @media screen and (min-width: $desktop) {
+    left: -35%;
+    transform: scale(.8);
+    top: 0;
     width: 179.5%;
   }
 }

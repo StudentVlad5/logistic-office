@@ -256,8 +256,13 @@
               <img id="road_3" src="images/svg_4/road_3.svg" alt="road parth 3" />
 
               <div class="bigboard_box">
-                <img id="big_board_white_right_side" src="images/svg_4/big_white_big_board_3.svg"
-                  alt="big board white" />
+                <picture>
+                  <source media="(max-width: 1440px)" srcset="images/bigboard_svg/mobile_svg/big_board_white_right_side.svg">
+                  <source media="(min-width: 1440px)" srcset="images/svg_4/big_white_big_board_3.svg">
+                  <img id="big_board_white_right_side" src="images/svg_4/big_white_big_board_3.svg" alt="big board white">
+                </picture> 
+                <!-- <img id="big_board_white_right_side" src="images/svg_4/big_white_big_board_3.svg"
+                  alt="big board white" /> -->
 
                 <div class="bigboard_box_container">
                   <h2 class="bigboard_box_title">З нами це стало реально, просто і швидко</h2>

@@ -261,9 +261,6 @@
                   <source media="(min-width: 1440px)" srcset="images/svg_4/big_white_big_board_3.svg">
                   <img id="big_board_white_right_side" src="images/svg_4/big_white_big_board_3.svg" alt="big board white">
                 </picture> 
-                <!-- <img id="big_board_white_right_side" src="images/svg_4/big_white_big_board_3.svg"
-                  alt="big board white" /> -->
-
                 <div class="bigboard_box_container">
                   <h2 class="bigboard_box_title">З нами це стало реально, просто і швидко</h2>
 
@@ -295,14 +292,20 @@
 
                 </div>
               </div>
-
+          <!-- блакитний бігборд на всю дорогу -->
               <div class="bigboard_blue-box bigboard_blue">
-                <img id="big_board_blue" src="images/svg_4/big_blue_big_board_3.svg" alt="big board blue" />
-
+                <picture>
+                  <source media="(max-width: 1440px)" srcset="images/bigboard_svg/mobile_svg/bigboard_blue-box.svg">
+                  <source media="(min-width: 1440px)" srcset="images/svg_4/big_blue_big_board_3.svg">
+                  <img id="big_board_blue" src="images/svg_4/big_blue_big_board_3.svg" alt="big board blue">
+                </picture> 
                 <div class="bigboard_blue-container">
-                  <h2 class="bigboard_blue-title">Сервіс <img src="images/logo_white.png" class="bigboard_blue-img"
-                      alt=""> У
-                    деталях</h2>
+                  <div class="bigboard_blue-container--wrap">
+                    <div class="bigboard_blue-container--title">
+                      <h2 class="bigboard_blue-title">Сервіс</h2> 
+                      <img src="images/logo_white.png" class="bigboard_blue-img"   alt="logo white"> 
+                      <h2 class="bigboard_blue-title">У деталях</h2>
+                    </div>
 
                   <div class="bigboard_blue-option-box">
                     <label class="switch">
@@ -315,9 +318,10 @@
                       <p class="bigboard_blue-option-text word2">Як стати водієм
                         та взяти попутний вантаж</p>
                     </label>
-
+                  </div>  
+                </div>
+                  <div class="bigboard_blue-option--discr">
                     <p id="switch-text" class="bigboard_blue-discr"></p>
-
                     <div class="count_box">
                       <p class="count_box-num">
                         <span class="count_box-num-text">01</span>/<span class="count_box-num-text1">07</span>

@@ -310,60 +310,87 @@
 }
 
 .bigboard_blue {
-  &-container {
+&-container {
     position: absolute;
+    width: 370px;
+    display: flex;
+    gap: 5px;
     top: 60%;
-    left: 69px;
-    z-index: 9999;
-
+    left: 24%;
+    z-index: 999;
+    height: 170px;
     @media screen and (min-width: $tablet) {
       top: 53%;
+      left: -8%;
+      gap: 10px;
+      width: 828px;
+      height: 270px;
+    }
+    @media screen and (min-width: $desktop) {
+      top: 53%;
       left: -170px;
+      gap: 20px;
+      height: 330px;
     }
   }
-
-  &-img {
-    width: 100px;
+&-container--wrap{
+  display: flex;
+  flex-direction: column;
+}
+&-container--title{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+  gap: 4px;
+  @media screen and (min-width: $tablet) {
+margin-top: 10px;
+  }
+}
+&-img {
+    width: 50px;
     @media screen and (min-width: $tablet) {
+      width: 105px;
+    }
+    @media screen and (min-width: $desktop) {
       width: 225px;
     }
   }
-
-  &-title {
-    display: flex;
+&-title {
+    display: inline;
     color: #1d1d1d;
-    text-align: right;
     font-family: 'Oswald', sans-serif;
     font-style: normal;
-    font-size: 24px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 120%;
     text-transform: uppercase;
-
-    // @media screen and (min-width: $tablet) {
-    //   font-size: 25px;
-    // }
-
+    white-space: nowrap;
     @media screen and (min-width: $tablet) {
+      font-size: 24px;
+    }
+    @media screen and (min-width: $desktop) {
       font-size: 55px;
     }
   }
-
-  &-option-box {
+&-option-box {
     display: flex;
-    margin-top: 25px;
+    margin-top: 10px;
 
     @media screen and (min-width: $tablet) {
+      margin-top: 10px;
+    }
+    @media screen and (min-width: $desktop) {
       margin-top: 50px;
     }
   }
-
-  &-option-text {
+&-option-text {
     padding: 10px;
     width: 120px;
     text-align: center;
     font-family: 'Inter', sans-serif;
-    font-size: 10px;
+    font-size: 7px;
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
@@ -377,44 +404,43 @@
     &:last-child {
       margin-right: 0;
     }
-
-    // @media screen and (min-width: $tablet) {
-    //   font-size: 10px;
-    //   padding: 15px;
-    //   width: 151px;
-    // }
-
     @media screen and (min-width: $tablet) {
-      padding: 30px;
-      font-size: 20px;
+      padding: 20px;
       width: 284px;
       margin-right: 15px;
+      font-size: 14px;
 
       &:last-child {
         margin-right: 0;
       }
     }
+    @media screen and (min-width: $desktop) {
+      font-size: 20px;
+      padding: 30px;
+    }
   }
-
-  &-discr {
+&-discr {
     color: #fff;
     font-family: 'Inter', sans-serif;
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
-    width: 204px;
-
-    position: absolute;
-    top: 8%;
-    left: 107%;
+    width: 100%;
 
     @media screen and (min-width: $tablet) {
-      top: 17%;
       font-size: 20px;
-      width: 390px;
     }
   }
+&-option--discr{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  flex-direction: column;
+  position: relative;
+  padding: 10px;
+  width: 100%;
+}
 }
 
 .label--isActive {
@@ -427,20 +453,32 @@
 .switch {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  gap: 10px;
   cursor: pointer;
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+  }
   &::after {
     content: '';
     position: absolute;
     top: 17px;
-    right: -4%;
+    right: 61%;
     height: 150px;
     width: 2px;
     background-color: #fff;
 
     @media screen and (min-width: $tablet) {
+      width: 3px;
+      height: 261px;
+      top: 5%;
+      left: 37%;
+    }
+    @media screen and (min-width: $desktop) {
       top: 0;
       height: 315px;
       width: 3px;
+      left: 81%;
     }
   }
 
@@ -448,8 +486,10 @@
     display: none;
 
     & + span {
-      padding-left: 57px;
-      display: block;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
       position: relative;
       white-space: nowrap;
       transition: color 0.3s ease;
@@ -458,35 +498,47 @@
       &:after {
         content: '';
         display: block;
-        position: absolute;
         border-radius: 12px;
       }
 
       &:before {
         top: 0;
         left: 0;
-        width: 42px;
-        height: 20px;
+        width: 32px;
+        height: 10px;
         border: 1px solid #ffffff;
         transition: all 0.3s ease;
         background-color: #ffffff;
+        @media screen and (min-width: $tablet) {
+          width: 42px;
+          height: 20px; 
+        }
       }
 
       &:after {
-        width: 16px;
-        height: 16px;
+        width: 12px;
+        height: 12px;
+        transform: translateX(-32px);
         background: rgb(0, 0, 0);
         top: 2px;
         left: 3px;
         box-shadow: 0 1px 3px rgba(#121621, 0.1);
         transition: all 0.45s ease;
+        @media screen and (min-width: $tablet) {
+          width: 16px;
+          height: 16px;
+          transform: translateX(-41px);
+        }
       }
     }
 
     &:checked {
       & + span {
         &::after {
-          transform: translate(18px, 0);
+          transform: translate(-12px, 0);
+          @media screen and (min-width: $tablet) {
+            transform: translate(-17px, 0);
+          }
         }
       }
     }
@@ -495,14 +547,13 @@
 
 .count_box {
   position: absolute;
-  bottom: -42px;
-  right: -240px;
+  bottom: 0px;
+  right: 0;
   display: flex;
   align-items: center;
 
   @media screen and (min-width: $tablet) {
-    bottom: -62px;
-    right: -408px;
+    right: 10px;
   }
 
   &-num {

@@ -520,6 +520,7 @@ $desktop: 1440px;
   top: 0;
   left: 0;
   z-index: 0;
+  pointer-events: none;
 }
 
 //  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -1389,12 +1390,18 @@ $desktop: 1440px;
   position: absolute;
   z-index: 99;
   transform: scale(0.35);
-  bottom: 10%;
+  bottom: 22%;
   left: -66.5%;
+  flex-direction: row;
   @media screen and (min-width: $tablet) {
+    transform: scale(0.55);
+    bottom: 26%;
+    left: -64%;
+  }
+  @media screen and (min-width: $desktop) {
     transform: scale(0.7);
     bottom: 10%;
-    width: 1663px;
+
   }
 }
 #big_board_white_both_side {

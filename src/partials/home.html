@@ -423,16 +423,20 @@
           <div class="fonOfRoad_5" id="fonOfRoad_5">
             <div class="item road_5">
               <img id="road_5" src="images/svg_4/road_4.svg" alt="road parth 5" />
-              <img id="big_board_white_with_trafficlight" src="images/svg_4/big_white_big_board_with_trafficlight.svg"
-                alt="big board white with traffic light" />
+              <picture>
+                <source media="(max-width: 1440px)" srcset="images/bigboard_svg/mobile_svg/big_board_white_with_trafficlight.svg">
+                <source media="(min-width: 1440px)" srcset="images/svg_4/big_white_big_board_with_trafficlight.svg">
+                <img id="big_board_white_with_trafficlight" src="images/svg_4/big_white_big_board_with_trafficlight.svg" alt="big board white with traffic light">
+              </picture> 
             </div>
 
             <div class="last_bord-box">
-              <h2 class="last_bord-title">Довіра та безпека</h2>
+
 
               <div class="last_bord-container">
 
                 <div class="last_bord-option-box">
+                  <h2 class="last_bord-title">Довіра та безпека</h2>
                   <label class="last_bord-switch">
                     <p class="last_bord-option-text label--isActive2 last-word1">Пам’ятка клієнту</p>
 
@@ -447,22 +451,20 @@
                 <div class="text_container">
                   <h3 id="last-switch-title"></h3>
                   <p id="last-switch-discr"></p>
-                </div>
+                  <div class="num_box">
+                    <p class="num_box-num">
+                      <span class="num_box-num-text">01</span>/<span class="num_box-num-text1">07</span>
+                    </p>
 
+                    <div class="num_btn-box">
+                      <button type="button" class="num_btn-btn last-btn-back" aria-label="back">
+                        <img src="images/bigboard_svg/arrow.svg" class="num_btn-img" alt="">
+                      </button>
 
-                <div class="num_box">
-                  <p class="num_box-num">
-                    <span class="num_box-num-text">01</span>/<span class="num_box-num-text1">07</span>
-                  </p>
-
-                  <div class="num_btn-box">
-                    <button type="button" class="num_btn-btn last-btn-back" aria-label="back">
-                      <img src="images/bigboard_svg/arrow.svg" class="num_btn-img" alt="">
-                    </button>
-
-                    <button type="button" class="num_btn-btn last-btn-next" aria-label="next">
-                      <img src="images/bigboard_svg/arrow.svg" class="num_btn-img" alt="">
-                    </button>
+                      <button type="button" class="num_btn-btn last-btn-next" aria-label="next">
+                        <img src="images/bigboard_svg/arrow.svg" class="num_btn-img" alt="">
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

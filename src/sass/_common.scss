@@ -4,6 +4,10 @@ $mobile: 375px;
 $tablet: 768px;
 $desktop: 1440px;
 
+body{
+  overflow: unset;
+}
+
 main {
   display: flex;
   justify-content: center;

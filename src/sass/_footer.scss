@@ -1,0 +1,43 @@
+.footer__nav {
+	list-style: none;
+}
+.footer__nav a {
+    text-decoration: none;
+    display: inline-block
+}
+.footer__nav a:hover {
+	cursor: pointer;
+}
+.navbar__logo--footer {
+	margin-bottom: 20px
+}
+.greet__btn--footer {
+	width: 70%;
+	float: right
+}
+.footer__nav, .footer__title--nav {
+	padding-left: 40px
+}
+.footer {
+	min-height: 412px;
+	background-color: #292f33;
+	padding-top: 46px;
+	font-size: 16px;
+	font-family: PTSans-Regular, sans-serif;
+	color: rgba(255, 255, 255, .7);
+}
+.footer__title {
+	font-size: 20px;
+	font-family: PTSans-Bold, sans-serif;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 30px;
+	color: rgba(255, 255, 255, .9)
+}
+.footer__copy, .form, .social__title {
+	font-size: 16px
+}
+.footer__nav a {
+	color: rgba(255, 255, 255, .7);
+	margin-bottom: 20px
+}

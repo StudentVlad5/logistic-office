@@ -863,7 +863,7 @@ margin-top: 10px;
     position: absolute;
     width: 350px;
     top: 4%;
-    left: 40%;
+    left: 38%;
     z-index: 9999;
     @media screen and (min-width: $tablet) {
       width: 775px;
@@ -927,7 +927,6 @@ margin-top: 10px;
     border-radius: 25px;
     border: 2px solid #fff;
     background: #0c96fd;
-    margin-right: 5px;
 
     &:last-child {
       margin-right: 0;
@@ -936,10 +935,6 @@ margin-top: 10px;
       padding: 25px;
       font-size: 16px;
       width: 180px;
-      margin-right: 15px;
-      &:last-child {
-        margin-right: 0;
-      }
     }
   }
 
@@ -974,7 +969,11 @@ margin-top: 10px;
     cursor: pointer;
     @media screen and (min-width: $tablet) {
       flex-direction: row; 
-      gap: 0px;
+      gap: 20px;
+    }
+    @media screen and (min-width: $desktop) {
+      flex-direction: row; 
+      gap: 30px;
     }
 
     .switch__inp2 {
@@ -1004,8 +1003,12 @@ margin-top: 10px;
           transition: all 0.3s ease;
           background-color: transparent;
           @media screen and (min-width: $tablet) {
-            top: 0;
-            left: 0;
+            top: -11px;
+            left: 6%;
+          }
+          @media screen and (min-width: $desktop) {
+            top: -11px;
+            left: 10%;
           }
 
         }
@@ -1019,8 +1022,12 @@ margin-top: 10px;
           box-shadow: 0 1px 3px rgba(#121621, 0.1);
           transition: all 0.45s ease;
           @media screen and (min-width: $tablet) {
-            top: 2px;
-            left: 3px;
+            top: -10px;
+            left: 12%;
+          }
+          @media screen and (min-width: $desktop) {
+            top: -9px;
+            left: 18%;
           }
         }
       }
@@ -1086,10 +1093,8 @@ margin-top: 10px;
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
-  width: 247px;
   @media screen and (min-width: $tablet) {
     font-size: 30px;
-    width: 305px;
   }
 }
 
@@ -1100,12 +1105,10 @@ margin-top: 10px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
-  width: 260px;
   margin-top: 5px;
 
   @media screen and (min-width: $tablet) {
     font-size: 18px;
-    width: 305px;
     margin-top: 10px;
   }
 }
@@ -1127,7 +1130,7 @@ margin-top: 10px;
 .num_box {
   position: absolute;
   bottom: 0%;
-  right: 0%;
+  right: 6%;
   display: flex;
   align-items: center;
   @media screen and (min-width: $desktop) {

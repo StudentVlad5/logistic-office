@@ -454,21 +454,11 @@ function startScene2() {
     document.getElementById("board_white_right_side_2").style.display = "block";
     document.getElementById("board_white_right_side_3").style.display = "block";
   }, 5000);
-
-  // setTimeout(() => {
-  //   document.getElementById("lastScene").style.display = "block";
-  // }, 6000);
 }
 
 turnLeft.onClick = startScene2;
 turnLeft.addEventListener("click", startScene2);
 
-// canvas.from(
-//   '#car_with_driver_',
-//   { opacity: 0.3, bottom: '35%', left: '50%', scale: 0.2 },
-//   0.5,
-//   0
-// );
 canvas.to(
   "#car_with_driver_start",
   { opacity: 0, scale: 0, duration: 0.01 },
@@ -518,7 +508,10 @@ canvas.to(
 );
 
 canvas.to("#canvas-2", { top: 0, duration: 1.2, easing: "linear" }, 0.2);
-// canvas.to("#canvas-2_2", { opacity: 1, y: 0, duration: 1.2 }, 0.5);
-// canvas.to("#canvas-1", { opacity: 1, y: -1.5 * speed }, 3.5);
 canvas.from("#canvas-2_3", { opacity: 0, top: "100%" }, 3.0);
 canvas.from("#movie_road", { opacity: 1, y: -0.5 * speed }, 3.2);
+if (widthWindow >= 1400) {
+canvas.to("#footer-container", { opacity: 1, y: -7.0 * speed }, 4.2);} 
+else {
+canvas.to("#footer-container", { opacity: 1, y: -18.0 * speed }, 4.2);
+}

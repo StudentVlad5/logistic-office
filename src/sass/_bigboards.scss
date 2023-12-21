@@ -863,7 +863,7 @@ margin-top: 10px;
     position: absolute;
     width: 350px;
     top: 4%;
-    left: 40%;
+    left: 38%;
     z-index: 9999;
     @media screen and (min-width: $tablet) {
       width: 775px;
@@ -1093,10 +1093,8 @@ margin-top: 10px;
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
-  width: 247px;
   @media screen and (min-width: $tablet) {
     font-size: 30px;
-    width: 305px;
   }
 }
 
@@ -1107,12 +1105,10 @@ margin-top: 10px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
-  width: 260px;
   margin-top: 5px;
 
   @media screen and (min-width: $tablet) {
     font-size: 18px;
-    width: 305px;
     margin-top: 10px;
   }
 }
@@ -1134,7 +1130,7 @@ margin-top: 10px;
 .num_box {
   position: absolute;
   bottom: 0%;
-  right: 0%;
+  right: 6%;
   display: flex;
   align-items: center;
   @media screen and (min-width: $desktop) {

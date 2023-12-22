@@ -829,11 +829,11 @@ $desktop: 1440px;
   z-index: 10;
   width: 50px;
   height: auto;
-  transform: scale(2);
+  transform: scale(2.5);
   display: none;
   @media screen and (min-width: $tablet) {
     left: 40%;
-    top: 40%;
+    top: 56%;
   }
 }
 #car_with_dog_and_driver {
@@ -844,11 +844,11 @@ $desktop: 1440px;
   z-index: 9;
   width: 50px;
   height: auto;
-  transform: scale(2);
+  transform: scale(2.5);
   display: none;
   @media screen and (min-width: $tablet) {
     left: 40%;
-    top: 40%;
+    top: 56%;
   }
 }
 #car_with_dog_and_plant_and_driver {
@@ -859,11 +859,11 @@ $desktop: 1440px;
   z-index: 9;
   width: 50px;
   height: auto;
-  transform: scale(2);
+  transform: scale(2.5);
   display: none;
   @media screen and (min-width: $tablet) {
     left: 40%;
-    top: 40%;
+    top: 56%;
   }
 }
 
@@ -884,7 +884,7 @@ $desktop: 1440px;
 
 #lady_with_package {
   position: absolute;
-  top: 50%;
+  top: 66%;
   left: 40%;
   opacity: 1;
   z-index: 10;
@@ -894,12 +894,12 @@ $desktop: 1440px;
   display: none;
   @media screen and (min-width: $tablet) {
     left: 36%;
-    top: 50%;
+    top: 66%;
   }
 }
 #lady_without_package {
   position: absolute;
-  top: 45%;
+  top: 63%;
   left: 40%;
   opacity: 1;
   z-index: 10;
@@ -909,12 +909,11 @@ $desktop: 1440px;
   display: none;
   @media screen and (min-width: $tablet) {
     left: 36%;
-    top: 46%;
-  }
+    top: 63%;  }
 }
 #lady_without_package_back {
   position: absolute;
-  top: 45%;
+  top: 63%;
   left: 40%;
   opacity: 1;
   z-index: 10;
@@ -924,12 +923,12 @@ $desktop: 1440px;
   display: none;
   @media screen and (min-width: $tablet) {
     left: 36%;
-    top: 46%;
+    top: 63%;
   }
 }
 #man_with_package {
   position: absolute;
-  top: 44%;
+  top: 64%;
   right: 40%;
   opacity: 1;
   z-index: 10;
@@ -943,7 +942,7 @@ $desktop: 1440px;
 }
 #man_without_package {
   position: absolute;
-  top: 42%;
+  top: 62%;
   right: 39%;
   opacity: 1;
   z-index: 10;
@@ -957,7 +956,7 @@ $desktop: 1440px;
 }
 #man_without_package_back {
   position: absolute;
-  top: 42%;
+  top: 62%;
   right: 39%;
   opacity: 1;
   z-index: 10;

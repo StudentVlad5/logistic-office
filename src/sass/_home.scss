@@ -1126,14 +1126,14 @@ $desktop: 1440px;
   }
 }
 #light_box-logo-img {
-  width: 150px;
-  height: 52px;
+  width: 70px;
+  height: 30px;
 }
 .light_box-logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 10px;
+  // padding-bottom: 10px;
 }
 .light_box-message {
   display: flex;
@@ -1212,6 +1212,50 @@ $desktop: 1440px;
 .active-light_box-btn {
   background: #fff;
   color: #0a93fd;
+}
+
+.light_box-list {
+  &-item {
+    border-radius: 13px;
+    border: 2px solid #0a93fd;
+    background-color: #fff;
+    padding: 5px 15px;
+    width: 190px;
+    cursor: pointer;
+    color: #0a93fd;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #0a93fd;
+      color: #fff;
+    }
+
+    @media screen and (min-width: $tablet) {
+      padding: 5px 15px;
+      width: 100%;
+    }
+
+    &-text {
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+
+      @media screen and (min-width: $tablet) {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
 }
 
 .logo_client_and_driver {
@@ -1375,13 +1419,13 @@ $desktop: 1440px;
   transform: scale(0.45);
   @media screen and (min-width: $tablet) {
     left: -40%;
-    transform: scale(.65);
+    transform: scale(0.65);
     top: 0;
     width: 179.5%;
   }
   @media screen and (min-width: $desktop) {
     left: -35%;
-    transform: scale(.8);
+    transform: scale(0.8);
     top: 0;
     width: 179.5%;
   }
@@ -1402,7 +1446,6 @@ $desktop: 1440px;
   @media screen and (min-width: $desktop) {
     transform: scale(0.7);
     bottom: 10%;
-
   }
 }
 #big_board_white_both_side {
@@ -1411,7 +1454,7 @@ $desktop: 1440px;
   z-index: 99;
   bottom: 23%;
   left: -78%;
-  transform: scale(.65);
+  transform: scale(0.65);
   @media screen and (min-width: $tablet) {
     transform: scale(0.7);
     bottom: 38%;
@@ -1426,12 +1469,12 @@ $desktop: 1440px;
   position: absolute;
   z-index: 99;
   bottom: 57%;
-  transform: scale(.4);
+  transform: scale(0.4);
   left: -61%;
   @media screen and (min-width: $tablet) {
     bottom: 46%;
     left: -63%;
-    transform: scale(.77);
+    transform: scale(0.77);
   }
   @media screen and (min-width: $desktop) {
     transform: scale(0.85);

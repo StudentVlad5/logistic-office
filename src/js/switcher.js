@@ -161,6 +161,10 @@ const lastSwitchDiscr = document.getElementById('last-switch-discr');
 const lastCount = document.querySelector('.num_box-num-text');
 const lastBtnBack = document.querySelector('.last-btn-back');
 const lastBtnNext = document.querySelector('.last-btn-next');
+const hiddenList = document.querySelector('.light_box-list');
+const message = document.querySelector('.light_box-message');
+const driverHidden = document.querySelectorAll('.driver-hidden');
+const clientHidden = document.querySelectorAll('.client-hidden');
 
 let lastCurrentIndex = 0;
 
@@ -290,6 +294,12 @@ client.addEventListener('click', function () {
   lastSwitchText.textContent = lastTitleArr1[lastCurrentIndex];
   lastSwitchDiscr.textContent = lastDiscrArr1[lastCurrentIndex];
   lastCount.textContent = `0${lastCurrentIndex + 1}`;
+
+  hiddenList.classList.remove('hidden');
+  message.classList.add('hidden');
+
+  driverHidden.forEach(el => el.classList.add('hidden'));
+  clientHidden.forEach(el => el.classList.remove('hidden'));
 });
 
 driver.addEventListener('click', function () {
@@ -317,4 +327,10 @@ driver.addEventListener('click', function () {
   lastSwitchText.textContent = lastTitleArr2[lastCurrentIndex];
   lastSwitchDiscr.textContent = lastDiscrArr2[lastCurrentIndex];
   lastCount.textContent = `0${lastCurrentIndex + 1}`;
+
+  hiddenList.classList.remove('hidden');
+  message.classList.add('hidden');
+
+  driverHidden.forEach(el => el.classList.remove('hidden'));
+  clientHidden.forEach(el => el.classList.add('hidden'));
 });

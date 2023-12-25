@@ -454,7 +454,12 @@ function startScene2() {
     document.getElementById("board_white_right_side_2").style.display = "block";
     document.getElementById("board_white_right_side_3").style.display = "block";
   }, 5000);
+  setTimeout(() => {
+    document.getElementById("car_with_driver_").style.display = "none";
+    document.getElementById("car_with_driver_direct").style.display = "block";
+  }, 7000);
 }
+
 
 turnLeft.onClick = startScene2;
 turnLeft.addEventListener("click", startScene2);

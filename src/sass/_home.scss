@@ -800,10 +800,26 @@ $desktop: 1440px;
     // left: 37%;
   }
 }
-
 #car_with_driver_.active {
   animation: turnForward_animation 3s cubic-bezier(0, 0, 1, 1) forwards;
 }
+
+#car_with_driver_direct {
+  position: absolute;
+  opacity: 1;
+  z-index: 22;
+  width: 50px;
+  bottom: 8%;
+  left: 23%;
+  transform: scale(2.2);
+  display: none;
+  @media screen and (min-width: $tablet) {
+  }
+}
+#car_with_driver_direct.active {
+  display: block;
+}
+
 
 #car_with_driver_leftAnimation {
   position: absolute;
@@ -829,7 +845,7 @@ $desktop: 1440px;
   z-index: 10;
   width: 50px;
   height: auto;
-  transform: scale(2.5);
+  transform: scale(3.5);
   display: none;
   @media screen and (min-width: $tablet) {
     left: 40%;
@@ -844,11 +860,11 @@ $desktop: 1440px;
   z-index: 9;
   width: 50px;
   height: auto;
-  transform: scale(2.5);
+  transform: scale(3.5);
   display: none;
   @media screen and (min-width: $tablet) {
     left: 40%;
-    top: 56%;
+    top: 55%;
   }
 }
 #car_with_dog_and_plant_and_driver {
@@ -859,11 +875,11 @@ $desktop: 1440px;
   z-index: 9;
   width: 50px;
   height: auto;
-  transform: scale(2.5);
+  transform: scale(3.5);
   display: none;
   @media screen and (min-width: $tablet) {
     left: 40%;
-    top: 56%;
+    top: 54%;
   }
 }
 
@@ -875,7 +891,7 @@ $desktop: 1440px;
   z-index: 10;
   width: 50px;
   height: auto;
-  transform: scale(2.5);
+  transform: scale(3.5);
   @media screen and (min-width: $tablet) {
     top: 55%;
     left: 36%;
@@ -894,7 +910,7 @@ $desktop: 1440px;
   display: none;
   @media screen and (min-width: $tablet) {
     left: 36%;
-    top: 66%;
+    top: 69%;
   }
 }
 #lady_without_package {
@@ -909,7 +925,7 @@ $desktop: 1440px;
   display: none;
   @media screen and (min-width: $tablet) {
     left: 36%;
-    top: 63%;  }
+    top: 66%;  }
 }
 #lady_without_package_back {
   position: absolute;
@@ -923,7 +939,7 @@ $desktop: 1440px;
   display: none;
   @media screen and (min-width: $tablet) {
     left: 36%;
-    top: 63%;
+    top: 66%;
   }
 }
 #man_with_package {
@@ -1095,33 +1111,30 @@ $desktop: 1440px;
   z-index: 11;
   width: 327px;
   height: 492px;
-  // height: 370px;
-  // width: 260px;
   background-image: url('../images/svg_3/light_box.svg');
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center center;
   display: none;
   @media screen and (min-width: $tablet) {
-    bottom: 10%;
-    left: 10%;
-    // height: 492px;
-    // width: 321px;
+    bottom: 2%;
+    left: 6%;
     width: 362px;
     height: 567px;
   }
   @media screen and (min-width: $desktop) {
-    bottom: 10%;
-    left: 1%;
+    bottom: 2%;
+    left: 6%;
   }
 }
 .light_box-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   gap: 10px;
-  // padding: 20px;
+  height: 76%;
   padding: 45px;
   transform: translateX(-10px);
   @media screen and (min-width: $tablet) {
@@ -1169,7 +1182,7 @@ $desktop: 1440px;
 .light_box-choiceMassage {
   display: flex;
   color: #0a93fd;
-  text-align: center;
+  justify-content: center;
   font-family: Inter;
   font-size: 18px;
   font-style: normal;
@@ -1179,12 +1192,14 @@ $desktop: 1440px;
     font-size: 25px;
   }
 }
+
 .light_box-buttonContainer {
   display: flex;
-  justify-content: row;
+  flex-direction: row;
   gap: 10px;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .light_box-btn {
   display: flex;
@@ -1259,6 +1274,16 @@ $desktop: 1440px;
       }
     }
   }
+}
+.light_box-footer{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  bottom: 0;
+  margin: 0 auto;
 }
 
 .hidden {

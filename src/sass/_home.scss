@@ -667,7 +667,7 @@ $desktop: 1440px;
   }
   @media screen and (min-width: $desktop) {
     right: 30%;
-    width: 80px;
+    bottom: 10%;
   }
 }
 
@@ -687,7 +687,7 @@ $desktop: 1440px;
   }
   @media screen and (min-width: $desktop) {
     left: 30%;
-    width: 80px;
+    bottom: 10%;
   }
 }
 
@@ -902,7 +902,7 @@ $desktop: 1440px;
 
 #lady_with_package {
   position: absolute;
-  top: 66%;
+  top: 67%;
   left: 40%;
   opacity: 1;
   z-index: 10;
@@ -912,13 +912,13 @@ $desktop: 1440px;
   display: none;
   @media screen and (min-width: $tablet) {
     left: 36%;
-    top: 69%;
+    top: 70%;
   }
 }
 #lady_without_package {
   position: absolute;
   top: 63%;
-  left: 40%;
+  left: 39%;
   opacity: 1;
   z-index: 10;
   width: 50px;
@@ -926,7 +926,7 @@ $desktop: 1440px;
   transform: scale(-0.8, 0.8);
   display: none;
   @media screen and (min-width: $tablet) {
-    left: 36%;
+    left: 35%;
     top: 66%;  }
 }
 #lady_without_package_back {

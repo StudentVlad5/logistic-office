@@ -703,7 +703,7 @@ $desktop: 1440px;
   background-position: center;
   background: rgb(136, 204, 223);
   background-position: center;
-  background-image: url('../images/svg_5/forst_fon_second_scene.svg');
+  background-image: url('../images/road_full_left.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -712,51 +712,40 @@ $desktop: 1440px;
   opacity: 1;
   transform: translateX(0%);
   transition: all;
-  // transition-duration: 5ms;
   transition-duration: 5s;
 }
 .canvas-2 {
   position: absolute;
   top: 100%;
   opacity: 1;
-  // top: 0;
   width: 1440px;
   height: 760px;
-  // overflow: hidden;
   background-position: center;
   display: none;
 }
 .canvas-2.active {
   opacity: 1;
   display: block;
-  // position: fixed;
 }
 
 .canvas-2_1 {
-  // position: fixed;
   opacity: 1;
-  // top: 0;
-  width: 1440px;
+  width: 2800px;
   height: 760px;
-  // overflow: hidden;
-
   background: rgb(136, 204, 223);
   background-position: center;
-  background-image: url('../images/svg_5/forst_fon_second_scene.svg');
+  background-image: url('../images/road_full_left.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  // background-position: center center;
+  background-position-x: left -500px;
 }
 // передача собаки та рослинки
 
 .canvas-2_2 {
-  // position: fixed;
   opacity: 1;
-  // top: 0;
   width: 1440px;
   height: 760px;
-  // overflow: hidden;
-  // transform: translateY(100%);
   display: none;
   background-image: url('../images/svg_4/fon_0.svg');
   background-repeat: no-repeat;
@@ -772,12 +761,9 @@ $desktop: 1440px;
   opacity: 1;
   top: 0;
   width: 1440px;
-  // overflow-x: hidden;
-  // transform: translateY(100%);
   overflow-y: scroll;
   overflow-x: hidden;
   -ms-overflow-style: none; /* IE and Edge */
-  // scrollbar-width: none; /* Firefox */
   background: rgb(136, 204, 223);
   background-position: center;
   &::-webkit-scrollbar {
@@ -796,10 +782,8 @@ $desktop: 1440px;
   z-index: 22;
   width: 50px;
   transform: scale(-0.2, 0.2);
-  // transform: scale(-4.6, 4.6);
   display: none;
   @media screen and (min-width: $tablet) {
-    // left: 37%;
   }
 }
 #car_with_driver_.active {
@@ -996,7 +980,6 @@ $desktop: 1440px;
   z-index: 10;
   height: auto;
   transform: scale(-0.65, 0.65);
-  // display: none;
   @media screen and (min-width: $tablet) {
     right: 33%;
   }
@@ -1009,7 +992,6 @@ $desktop: 1440px;
   z-index: 10;
   height: auto;
   transform: scale(0.45);
-  // display: none;
   @media screen and (min-width: $tablet) {
     right: 33%;
   }
@@ -1020,10 +1002,7 @@ $desktop: 1440px;
   opacity: 1;
   z-index: 10;
   height: auto;
-  // transform: scale(0.45);
-  // display: none;
   @media screen and (min-width: $tablet) {
-    // right: 33%;
   }
 }
 #hills_2_2 {
@@ -1035,10 +1014,7 @@ $desktop: 1440px;
   width: 117%;
   height: 57%;
   left: -8%;
-  // transform: scale(0.45);
-  // display: none;
   @media screen and (min-width: $tablet) {
-    // right: 33%;
   }
 }
 #direct_road {
@@ -1050,10 +1026,7 @@ $desktop: 1440px;
   opacity: 1;
   z-index: 20;
   height: auto;
-  // transform: scale(0.45);
-  // display: none;
   @media screen and (min-width: $tablet) {
-    // right: 33%;
   }
 }
 #far_road {
@@ -1065,10 +1038,7 @@ $desktop: 1440px;
   opacity: 1;
   z-index: 10;
   height: auto;
-  // transform: scale(0.45);
-  // display: none;
   @media screen and (min-width: $tablet) {
-    // right: 33%;
   }
 }
 #forest {
@@ -1080,10 +1050,7 @@ $desktop: 1440px;
   opacity: 1;
   z-index: 10;
   height: auto;
-  // transform: scale(0.45);
-  // display: none;
   @media screen and (min-width: $tablet) {
-    // right: 33%;
   }
 }
 #bushes {
@@ -1094,10 +1061,7 @@ $desktop: 1440px;
   z-index: 12;
   height: auto;
   width: 200px;
-  // transform: scale(0.45);
-  // display: none;
   @media screen and (min-width: $tablet) {
-    // right: 33%;
     width: 400px;
   }
 }
@@ -1152,7 +1116,6 @@ $desktop: 1440px;
   display: flex;
   justify-content: center;
   align-items: center;
-  // padding-bottom: 10px;
 }
 .light_box-message {
   display: flex;

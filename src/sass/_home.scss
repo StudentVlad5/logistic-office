@@ -1562,7 +1562,7 @@ width: 100px;
   flex-direction: column;
 }
 .big-board-wrap--column .big-board-img{
-  width: 30px;
+  width: 50px;
   height: 50px;
 }
 .big-board-smallmessage{
@@ -1598,4 +1598,7 @@ width: 40px;
 }
 #big-board-2 {
   z-index: 101;
+}
+.big-board-img.big-board-img--vertical{
+  width: 25px;
 }

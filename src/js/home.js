@@ -419,7 +419,7 @@ function startScene2() {
     document.getElementById("man_with_package").style.display = "block";
     document.getElementById("man_without_package").style.display = "block";
     document.getElementById("man_without_package_back").style.display = "block";
-    document.getElementById("car_with_dog_and_driver").style.display = "block";
+    // document.getElementById("car_with_dog_and_driver").style.display = "block";
     document.getElementById("car_with_dog_and_plant_and_driver").style.display =
       "block";
     document.getElementById("car_with_driver_").style.display = "block";
@@ -469,28 +469,28 @@ canvas.to(
   { opacity: 0, scale: 0, duration: 0.01 },
   2.4
 );
-canvas.from(
-  "#car_with_dog_and_driver",
-  { opacity: 0, duration: 0.01, scale: 0 },
-  2.4
-);
-canvas.to(
-  "#car_with_dog_and_driver",
-  { opacity: 0, duration: 0.01, scale: 0 },
-  2.6
-);
+// canvas.from(
+//   "#car_with_dog_and_driver",
+//   { opacity: 0, duration: 0.01, scale: 0 },
+//   2.4
+// );
+// canvas.to(
+//   "#car_with_dog_and_driver",
+//   { opacity: 0, duration: 0.01, scale: 0 },
+//   2.4
+// );
 canvas.from(
   "#car_with_dog_and_plant_and_driver",
   { opacity: 0, duration: 0.01 },
-  2.6
+  2.4
 );
 
 canvas.from("#lady_with_package", { opacity: 0, x: -250 }, 1.7, 0.1);
 canvas.to("#lady_with_package", { opacity: 0, duration: 0.01 }, 2.4);
 canvas.from("#lady_without_package", { opacity: 0, duration: 0.01 }, 2.4);
 canvas.from("#man_with_package", { opacity: 0, x: 250 }, 1.7, 0.1);
-canvas.to("#man_with_package", { opacity: 0, duration: 0.01 }, 2.6);
-canvas.from("#man_without_package", { opacity: 0, duration: 0.01 }, 2.6);
+canvas.to("#man_with_package", { opacity: 0, duration: 0.01 }, 2.4);
+canvas.from("#man_without_package", { opacity: 0, duration: 0.01 }, 2.4);
 
 canvas.to("#man_without_package", { opacity: 0, duration: 0.01 }, 2.8);
 canvas.to("#lady_without_package", { opacity: 0, duration: 0.01 }, 2.8);

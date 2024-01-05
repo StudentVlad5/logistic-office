@@ -460,7 +460,6 @@ function startScene2() {
   }, 7000);
 }
 
-
 turnLeft.onClick = startScene2;
 turnLeft.addEventListener("click", startScene2);
 
@@ -491,6 +490,11 @@ canvas.to("#lady_without_package_back", { x: -200, duration: 1 }, 2.8);
 canvas.to("#lady_without_package_back", { opacity: 0, duration: 0.1 }, 3.3);
 canvas.to("#man_without_package_back", { x: 200, duration: 1 }, 2.8);
 canvas.to("#man_without_package_back", { opacity: 0, duration: 0.1 }, 3.3);
+canvas.from(
+  "#man_without_package_back",
+  { opacity: 0, duration: 0.1, display: "none" },
+  3.9
+);
 canvas.to(
   "#car_with_dog_and_plant_and_driver",
   { y: 4 * speed, duration: 1.5 },

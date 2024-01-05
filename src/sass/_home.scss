@@ -108,7 +108,7 @@ $desktop: 1440px;
     opacity: 1;
     transform: scale(-2.2, 2.2);
     bottom: 8%;
-    left: 23%;
+    left: 21%;
   }
 }
 
@@ -817,7 +817,7 @@ $desktop: 1440px;
   }
 }
 #car_with_driver_.active {
-  animation: turnForward_animation 3s cubic-bezier(0, 0, 1, 1) forwards;
+  animation: turnForward_animation 4s cubic-bezier(0, 0, 1, 1) forwards;
 }
 
 #car_with_driver_direct {
@@ -826,7 +826,7 @@ $desktop: 1440px;
   z-index: 22;
   width: 50px;
   bottom: 8%;
-  left: 23%;
+  left: 21%;
   transform: scale(2.2);
   display: none;
   @media screen and (min-width: $tablet) {

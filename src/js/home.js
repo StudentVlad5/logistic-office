@@ -469,16 +469,6 @@ canvas.to(
   { opacity: 0, scale: 0, duration: 0.01 },
   2.4
 );
-// canvas.from(
-//   "#car_with_dog_and_driver",
-//   { opacity: 0, duration: 0.01, scale: 0 },
-//   2.4
-// );
-// canvas.to(
-//   "#car_with_dog_and_driver",
-//   { opacity: 0, duration: 0.01, scale: 0 },
-//   2.4
-// );
 canvas.from(
   "#car_with_dog_and_plant_and_driver",
   { opacity: 0, duration: 0.01 },

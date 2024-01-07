@@ -351,7 +351,7 @@ if (widthWindow >= 800) {
   canvas.to(
     "#horizontalRoad",
     {
-      bottom: "0",
+      bottom: "-70px",
       duration: 0.2,
     },
     3.4
@@ -381,34 +381,37 @@ const scene1 = document.querySelector(".canvas");
 const scene2 = document.querySelector(".canvas-1");
 const scene3 = document.querySelector(".canvas-2");
 const car_turn_left = document.getElementById("car_turn_left");
-const car_turn_left_move = document.getElementById("car_turn_left_move");
+// const car_turn_left_move = document.getElementById("car_turn_left_move");
 const car = document.getElementById("car");
 
 function startScene2() {
   scene2.classList.add("active");
   scene1.classList.add("active");
   scene3.classList.add("active");
-  car_turn_left_move.style.display = "block";
+  // car_turn_left_move.style.display = "block";
   car_turn_left.style.display = "block";
   car.style.display = "none";
   setTimeout(() => {
     car_turn_left.classList.add("active");
-    car_turn_left_move.classList.add("active");
+    // car_turn_left_move.classList.add("active");
     document.getElementById("light_box").style.display = "flex";
   }, 100);
 
   setTimeout(() => {
-    scene1.style.display = "none";
     document
       .getElementById("car_with_driver_leftAnimation")
       .classList.add("active");
     document.getElementById("car_with_driver_").classList.add("active");
-  }, 1500);
+  }, 600);
 
   setTimeout(() => {
     scene1.style.display = "none";
+  }, 2000);
+
+  setTimeout(() => {
     window.scrollTo(0, 0);
   }, 3000);
+
   setTimeout(() => {
     scene2.style.position = "relative";
     document.getElementById("car_with_driver_start").style.display = "block";

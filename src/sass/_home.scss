@@ -68,23 +68,29 @@ $desktop: 1440px;
     opacity: 1;
     right: 20%;
   }
-  25% {
+  20% {
     opacity: 1;
     transform: scale(-0.6, 0.6);
     right: 25%;
-    top: 67%;
+    top: 65%;
   }
-  50% {
+  35% {
+    opacity: 1;
+    transform: scale(-0.5, 0.5);
+    right: 27%;
+    top: 62%;
+  }
+  45% {
     opacity: 1;
     transform: scale(-0.4, 0.4);
     right: 30%;
-    top: 62%;
+    top: 59%;
   }
-  75% {
+  70% {
     opacity: 0;
     transform: scale(-0.3, 0.3);
     right: 45%;
-    top: 60%;
+    top: 58%;
   }
   100% {
     opacity: 0;
@@ -163,29 +169,29 @@ $desktop: 1440px;
 
 #car {
   position: absolute;
-  top: 63%;
-  left: 45%;
+  top: 70%;
+  left: 42%;
   z-index: 12;
   width: 50px;
   height: auto;
-  transform: scale(2);
+  transform: scale(2.2);
   //  transform: scale(0.4) translate(-230%, -50%);
 
   @media screen and (min-width: $tablet) {
-    top: 66%;
-    left: 45%;
-    transform: scale(2);
+    top: 74%;
+    left: 41%;
+    transform: scale(2.2);
   }
   @media screen and (min-width: $desktop) {
-    top: 70%;
-    left: 42%;
+    top: 74%;
+    left: 41%;
     transform: scale(2.5);
   }
 }
 #car_turn_left {
   position: absolute;
-  top: 63%;
-  left: 45%;
+  top: 72%;
+  left: 43%;
   z-index: 12;
   width: 50px;
   height: auto;
@@ -193,12 +199,12 @@ $desktop: 1440px;
   display: none;
 
   @media screen and (min-width: $tablet) {
-    top: 66%;
-    left: 45%;
+    top: 76%;
+    left: 41%;
     transform: scale(-3, 3);
   }
   @media screen and (min-width: $desktop) {
-    top: 70%;
+    top: 76%;
     left: 42%;
     transform: scale(-3.5, 3.5);
   }
@@ -207,32 +213,32 @@ $desktop: 1440px;
   animation: turnCarLeft_animation .5s cubic-bezier(0, 0, 1, 1) forwards
 }
 
-#car_turn_left_move {
-  position: absolute;
-  top: 73%;
-  left: 45%;
-  z-index: 12;
-  width: 50px;
-  height: auto;
-  transform: scale(-3, 3);
-  opacity: 0;
-  display: none;
+// #car_turn_left_move {
+//   position: absolute;
+//   top: 73%;
+//   left: 45%;
+//   z-index: 12;
+//   width: 50px;
+//   height: auto;
+//   transform: scale(-3, 3);
+//   opacity: 0;
+//   display: none;
 
-  @media screen and (min-width: $tablet) {
-    left: 20%;
-    top: 80%;
-    transform: scale(-6.5, 6.5);
-  }
-  @media screen and (min-width: $desktop) {
-    left: 20%;
-    top: 80%;
-    transform: scale(-6.5, 6.5);
-  }
-}
+//   @media screen and (min-width: $tablet) {
+//     left: 20%;
+//     top: 80%;
+//     transform: scale(-6.5, 6.5);
+//   }
+//   @media screen and (min-width: $desktop) {
+//     left: 20%;
+//     top: 80%;
+//     transform: scale(-6.5, 6.5);
+//   }
+// }
 
-#car_turn_left_move.active {
-  animation: 0.4s cubic-bezier(0, 0, 1, 1) 0.8s turnLeft;
-}
+// #car_turn_left_move.active {
+//   animation: 0.4s cubic-bezier(0, 0, 1, 1) 0.8s turnLeft;
+// }
 
 #cloud {
   &-1 {
@@ -720,12 +726,17 @@ $desktop: 1440px;
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 6px;
+  top: 4px;
   left: 2px;
   color: white;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 6px;
   z-index: 150;
+  @media screen and (min-width: $tablet) {
+    font-size: 10px;
+    top: 6px;
+    left: 2px;
+  }
 }
 
 #turnLeft {
@@ -752,13 +763,19 @@ $desktop: 1440px;
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 6px;
-  left: 23px;
+  top: 4px;
+  left: 3px;
+
   color: white;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 6px;
   transform: scale(-1, 1);
   z-index: 150;
+  @media screen and (min-width: $tablet) {
+    font-size: 10px;    
+    top: 6px;
+    left: 23px;
+  }
 }
 // 2 PATH
 .canvas-1 {
@@ -817,7 +834,7 @@ $desktop: 1440px;
   display: none;
   background-image: url('../images/svg_4/fon_0.svg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 133%;
   background-position: center center;
 }
 .canvas-2_3 {
@@ -902,25 +919,10 @@ $desktop: 1440px;
   transform: scale(3.5);
   display: none;
   @media screen and (min-width: $tablet) {
-    left: 40%;
-    top: 55%;
+    top: 72%;
+    left: 37%;
   }
 }
-// #car_with_dog_and_driver {
-//   position: absolute;
-//   top: 50%;
-//   left: 42.5%;
-//   opacity: 1;
-//   z-index: 9;
-//   width: 50px;
-//   height: auto;
-//   transform: scale(3.5);
-//   display: none;
-//   @media screen and (min-width: $tablet) {
-//     left: 40%;
-//     top: 55%;
-//   }
-// }
 #car_with_dog_and_plant_and_driver {
   position: absolute;
   top: 46%;
@@ -932,8 +934,8 @@ $desktop: 1440px;
   transform: scale(3.5);
   display: none;
   @media screen and (min-width: $tablet) {
-    left: 40%;
-    top: 52%;
+    top: 69%;
+    left: 37%;
   }
 }
 
@@ -963,7 +965,7 @@ $desktop: 1440px;
   transform: scale(1.5);
   display: none;
   @media screen and (min-width: $tablet) {
-    left: 36%;
+    left: 30%;
     top: 70%;
   }
 }
@@ -978,8 +980,9 @@ $desktop: 1440px;
   transform: scale(-0.8, 0.8);
   display: none;
   @media screen and (min-width: $tablet) {
-    left: 35%;
-    top: 66%;  }
+    top: 65%;
+    left: 29%;
+    }
 }
 #lady_without_package_back {
   position: absolute;
@@ -992,8 +995,8 @@ $desktop: 1440px;
   transform: scale(0.8);
   display: none;
   @media screen and (min-width: $tablet) {
-    left: 36%;
-    top: 66%;
+    top: 65%;
+    left: 29%;
   }
 }
 #man_with_package {
@@ -1007,7 +1010,7 @@ $desktop: 1440px;
   transform: scale(-1, 1);
   display: none;
   @media screen and (min-width: $tablet) {
-    right: 34%;
+    right: 52%;
   }
 }
 #man_without_package {
@@ -1021,7 +1024,7 @@ $desktop: 1440px;
   transform: scale(0.65);
   display: none;
   @media screen and (min-width: $tablet) {
-    right: 33%;
+    right: 51%;
   }
 }
 #man_without_package_back {
@@ -1035,7 +1038,7 @@ $desktop: 1440px;
   transform: scale(-0.65, 0.65);
   display: none;
   @media screen and (min-width: $tablet) {
-    right: 33%;
+    right: 51%;
   }
 }
 
@@ -1205,7 +1208,7 @@ $desktop: 1440px;
   color: #0a93fd;
   text-align: center;
   font-family: Oswald;
-  font-size: 12px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   text-transform: uppercase;

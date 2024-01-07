@@ -360,6 +360,7 @@ margin-top: 10px;
   }
 &-title {
     display: inline;
+    width: 100%;
     color: #1d1d1d;
     font-family: 'Oswald', sans-serif;
     font-style: normal;
@@ -367,6 +368,7 @@ margin-top: 10px;
     font-weight: 500;
     line-height: 120%;
     text-transform: uppercase;
+    text-align: center;
     white-space: nowrap;
     @media screen and (min-width: $tablet) {
       font-size: 24px;
@@ -869,10 +871,12 @@ margin-top: 10px;
     @media screen and (min-width: $tablet) {
       width: 775px;
       top: 8%;
-      left: 24%;
+      left: 26%;
     }
     @media screen and (min-width: $desktop) {
       width: 870px;
+      top: 8%;
+      left: 24%;
     }
   }
 
@@ -1132,9 +1136,12 @@ margin-top: 10px;
 .num_box {
   position: absolute;
   bottom: 0%;
-  right: 6%;
+  right: 4%;
   display: flex;
   align-items: center;
+  @media screen and (min-width: $tablet) {
+    right: 42%;
+  }
   @media screen and (min-width: $desktop) {
     right: 10%;
   }

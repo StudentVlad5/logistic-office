@@ -637,7 +637,7 @@ margin-top: 10px;
   align-items: center;
   width: 350px;
   top: 30%;
-  z-index: 9999;
+  z-index: 999;
 
   @media screen and (min-width: $tablet) {
     top: 13%;
@@ -865,7 +865,7 @@ margin-top: 10px;
     width: 350px;
     top: 4%;
     left: 38%;
-    z-index: 9999;
+    z-index: 100;
     @media screen and (min-width: $tablet) {
       width: 775px;
       top: 8%;

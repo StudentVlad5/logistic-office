@@ -370,7 +370,7 @@ gsap.to("#car", {
   duration: 1,
   repeat: -1,
   scrollTrigger: {
-    start: "top top",
+    start: "top 50%",
     end: "bottom 50%+=100px",
   },
 });
@@ -419,7 +419,6 @@ function startScene2() {
     document.getElementById("man_with_package").style.display = "block";
     document.getElementById("man_without_package").style.display = "block";
     document.getElementById("man_without_package_back").style.display = "block";
-    // document.getElementById("car_with_dog_and_driver").style.display = "block";
     document.getElementById("car_with_dog_and_plant_and_driver").style.display =
       "block";
     document.getElementById("car_with_driver_").style.display = "block";
@@ -486,13 +485,13 @@ canvas.to("#lady_without_package", { opacity: 0, duration: 0.01 }, 2.8);
 
 canvas.from("#lady_without_package_back", { opacity: 0, duration: 0.01 }, 2.8);
 canvas.from("#man_without_package_back", { opacity: 0, duration: 0.01 }, 2.8);
-canvas.to("#lady_without_package_back", { x: -200, duration: 1 }, 2.8);
+canvas.to("#lady_without_package_back", { x: -250, duration: 1 }, 2.8);
 canvas.to("#lady_without_package_back", { opacity: 0, duration: 0.1 }, 3.3);
-canvas.to("#man_without_package_back", { x: 200, duration: 1 }, 2.8);
+canvas.to("#man_without_package_back", { x: 250, duration: 1 }, 2.8);
 canvas.to("#man_without_package_back", { opacity: 0, duration: 0.1 }, 3.3);
 canvas.from(
   "#man_without_package_back",
-  { opacity: 0, duration: 0.1, display: "none" },
+  { opacity: 0, duration: 0.1, zIndex: "10" },
   3.9
 );
 canvas.to(

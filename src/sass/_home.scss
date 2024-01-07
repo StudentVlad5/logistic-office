@@ -34,6 +34,21 @@ $desktop: 1440px;
   }
 }
 
+@keyframes turnCarLeft_animation {
+  1% {
+    opacity: 1;
+    left: 30%;
+    top: 80%;
+  }
+  98% {
+    opacity: 1;
+  }
+  100% {
+    left: 5%;
+    top: 85%;
+    opacity: 0;
+  }
+}
 @keyframes turnLeft {
   10% {
     opacity: 1;
@@ -189,15 +204,12 @@ $desktop: 1440px;
   }
 }
 #car_turn_left.active {
-  left: 30%;
-  top: 80%;
-  opacity: 0;
-  transition: all 1s cubic-bezier(0, 0, 1, 1);
+  animation: turnCarLeft_animation .5s cubic-bezier(0, 0, 1, 1) forwards
 }
 
 #car_turn_left_move {
   position: absolute;
-  top: 63%;
+  top: 73%;
   left: 45%;
   z-index: 12;
   width: 50px;
@@ -1102,7 +1114,7 @@ $desktop: 1440px;
   justify-content: start;
   align-items: center;
   left: 18%;
-  bottom: 20%;
+  bottom: 32%;
   opacity: 1;
   z-index: 11;
   width: 327px;

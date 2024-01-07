@@ -190,32 +190,32 @@ canvas.from("#cloud-4", { opacity: 0, x: -150 }, 1.65);
 canvas.to("#cloud-4", { x: 7 * speed, scale: 0.5, duration: 2 }, 2.15);
 
 if (widthWindow >= 800) {
-  canvas.from("#big-board-1", { opacity: 0, x: -150 }, 1.7);
+  canvas.from("#big-board-1", { opacity: 0, x: -250, duration: 0.3 }, 1.7);
   canvas.to(
     "#big-board-1",
-    { x: kf * speed, y: 0.8 * speed, scale: 0, opacity: 0.8 },
+    { x: kf * speed, y: 0.8 * speed, scale: 0, opacity: 0.6 },
     2.1
   );
-  canvas.from("#big-board-2", { opacity: 0, x: -150 }, 2.3);
+  canvas.from("#big-board-2", { opacity: 0, x: -150, duration: 0.3 }, 2.3);
   canvas.to(
     "#big-board-2",
-    { x: kf * speed, y: 0.8 * speed, scale: 0, opacity: 0.8 },
+    { x: kf * speed, y: 0.8 * speed, scale: 0, opacity: 0.6 },
     2.8
   );
-  canvas.from("#big-board-3", { opacity: 0, x: -150 }, 3.0);
-  canvas.from("#big-board-4", { opacity: 0, x: 150 }, 1.7);
+  canvas.from("#big-board-3", { opacity: 0, x: -150, duration: 0.3 }, 3.0);
+  canvas.from("#big-board-4", { opacity: 0, x: 150, duration: 0.3 }, 1.7);
   canvas.to(
     "#big-board-4",
-    { x: -kf * speed, y: 0.8 * speed, scale: 0, opacity: 0.8 },
+    { x: -kf * speed, y: 0.8 * speed, scale: 0, opacity: 0.6 },
     2.1
   );
-  canvas.from("#big-board-5", { opacity: 0, x: 150 }, 2.3);
+  canvas.from("#big-board-5", { opacity: 0, x: 150, duration: 0.3 }, 2.3);
   canvas.to(
     "#big-board-5",
-    { x: -kf * speed, y: 0.8 * speed, scale: 0, opacity: 0.8 },
+    { x: -kf * speed, y: 0.8 * speed, scale: 0, opacity: 0.6 },
     2.8
   );
-  canvas.from("#big-board-6", { opacity: 0, x: 150 }, 3.0);
+  canvas.from("#big-board-6", { opacity: 0, x: 150, duration: 0.3 }, 3.0);
 }
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 else {
